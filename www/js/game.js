@@ -4,12 +4,15 @@ var PhaserGame = function () {
 
     this.bmd = null;
 
-    this.alien = null;
+    this.num_objects = 1;
+
+    this.objects = [];
+    //this.alien = null;
 
     this.mode = 0;
 
     this.points = {
-        'x': [ 32, 128, 256, 384, 512, 608 ],
+        'x': [ 608, 512, 384, 256, 128, 32 ],
         'y': [ 240, 240, 240, 240, 240, 240 ]
     };
 
@@ -46,17 +49,24 @@ PhaserGame.prototype = {
         this.bmd = this.add.bitmapData(this.game.width, this.game.height);
         this.bmd.addToWorld();
 
-        this.alien = this.add.sprite(0, 0, 'alien');
-        this.alien.anchor.set(0.5);
+        // Create enemy sprites
+        for (var i = 0; i < this.num_objects; i++)
+        {
+            this.objects[i] = this.add.sprite(0, 0, 'alien');
+            this.objects[i].anchor.set(0.5);
+        }
+
+        /*this.alien = this.add.sprite(0, 0, 'alien');
+        this.alien.anchor.set(0.5);*/
 
         var py = this.points.y;
 
-        for (var i = 0; i < py.length; i++)
+        /*for (var i = 0; i < py.length; i++)
         {
             py[i] = this.rnd.between(32, 432);
-        }
+        }*/
 
-        this.hint = this.add.bitmapText(8, 444, 'shmupfont', "Linear", 24);
+        //this.hint = this.add.bitmapText(8, 444, 'shmupfont', "Linear", 24);
 
         this.input.onDown.add(this.changeMode, this);
 
@@ -130,8 +140,12 @@ PhaserGame.prototype = {
 
     update: function () {
 
-        this.alien.x = this.path[this.pi].x;
-        this.alien.y = this.path[this.pi].y;
+        // Update object positions
+        for (var i = 0; i < this.num_objects; i++)
+        {
+            this.objects[i].x = this.path[this.pi].x;
+            this.objects[i].y = this.path[this.pi].x;
+        }
 
         this.pi++;
 
@@ -139,7 +153,6 @@ PhaserGame.prototype = {
         {
             this.pi = 0;
         }
-
     }
 
 };
