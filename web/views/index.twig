@@ -1,16 +1,14 @@
 <html>
   <head>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+	<script src="lib/jquery.min.js"></script>
   </head>
 
   <body>
-    <div id='demo' />
+    <pre id='demo'>Geolocation</pre>
 
-
-
-    <script>
+    <script type="text/javascript">
       var x = document.getElementById("demo");
-      getLocation();
 
       function getLocation() {
         if (navigator.geolocation) {
@@ -39,14 +37,18 @@
           type: 'application/JSON',
           data: data,
           success: function(response){
-            alert(JSON.parse(response));
+            $("#demo").text(response);
           },
-          error: function(response){
-            alert("Something has went terribly wrong");
-          }
+          error: function(response) {
+          	alert("Error loading data");
+		  }
         });
       }
+      
+	  getLocation();
+	  // Test
+	  //sendToServer({"coords":{"latitude":50.55232, "longditude":55.12345}});
     </script>
-  </body>
+  
 
 </html>
