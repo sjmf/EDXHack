@@ -122,7 +122,7 @@ PhaserGame.prototype = {
         }
 
         // Place the item
-        this.items.push(this.add.sprite(x, this.lane_y_points[i], 'pollutionCloud'));
+        this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'pollutionCloud'));
 
 
         console.log(x + " " + y);
