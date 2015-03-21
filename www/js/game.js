@@ -87,6 +87,15 @@ PhaserGame.prototype = {
 
         // 
         this.genPaths();
+
+        // ----------
+        // Setup input
+        // ----------
+        this.input.mouse.onMouseDown(this.placeItem);
+    },
+
+    placeItems: function() {
+        console.log("mouse down");
     },
 
     genPaths: function () {
