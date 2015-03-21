@@ -35,7 +35,6 @@ PhaserGame.prototype = {
     init: function () {
 
         this.game.renderer.renderSession.roundPixels = true;
-        this.stage.backgroundColor = '#204090';
 
     },
 
@@ -51,14 +50,21 @@ PhaserGame.prototype = {
         
         // Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
-        this.load.image('lond', 'assets/back/london.png');
+        this.load.image('lond', 'assets/back/londonphoto.png');
         cities = [ 'newc', 'lond' ];
+
+        // Load background image
+        this.load.image('background', 'assets/back/grass.png');
     },
 
     create: function () {
 
         this.bmd = this.add.bitmapData(this.game.width, this.game.height);
         this.bmd.addToWorld();
+
+        //
+        this.background = this.add.tileSprite(0, 0, game.width, game.height, 'background');
+        this.background.fixedToCamera = true;
 
         // -----------
         // Setup Enemy paths
