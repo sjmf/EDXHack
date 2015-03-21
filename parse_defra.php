@@ -22,7 +22,11 @@ function fetch_defra($site_id = 'ACTH', $view = 'last_hour') {
     $data = array();
     foreach ($m[1] as $v) {
         preg_match_all('!<td>(.+?)</td>!',$v,$n);
-        $data[] = $n[1];
+	$d = array();
+        foreach ($headings as $k=>$h) {
+        	$d[strtolower($h)] = $n[1][$k];
+	}
+        $data[] = $d;
     }
 
     return array(
