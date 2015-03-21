@@ -46,12 +46,13 @@ PhaserGame.prototype = {
         //this.load.baseURL = 'http://files.phaser.io.s3.amazonaws.com/codingtips/issue008/';
         //this.load.crossOrigin = 'anonymous';
 
+        // Add enemy images
         this.load.image('pollutionCloud', 'assets/Pol/1.png');
-        this.load.image('alien', 'assets/ufo.png')
-        //this.load.bitmapFont('shmupfont', 'assets/shmupfont.png', 'assets/shmupfont.xml');
-
-        //  Note: Graphics are not for use in any commercial project
-
+        
+        // Add city images
+        this.load.image('newc', 'assets/back.newcastle.png');
+        this.load.image('lond', 'assets/back/london.png');
+        cities = [ 'newc', 'lond' ];
     },
 
     create: function () {
@@ -71,7 +72,7 @@ PhaserGame.prototype = {
             this.enemy_y_points[i] = (path_interval * i) + path_interval;
 
             // Setup path's perfect city
-            this.perfect_cities[i] = this.add.sprite(this.x_bounds[1], this.enemy_y_points[i], 'alien');
+            this.perfect_cities[i] = this.add.sprite(this.x_bounds[1], this.enemy_y_points[i], cities[i]);
         }
 
         // ----------
