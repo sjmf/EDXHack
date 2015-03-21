@@ -1,147 +1,140 @@
-    var game = new Phaser.Game(640, 480, Phaser.AUTO, 'game');
+var size = {
+    width: window.innerWidth || document.body.clientWidth,
+    height: window.innerHeight || document.body.clientHeight
+}    
 
-    var PhaserGame = function () {
+var game = new Phaser.Game(size.width, size.height, Phaser.AUTO, 'game');
 
-        this.bmd = null;
+var PhaserGame = function () {
 
-        this.alien = null;
+    this.bmd = null;
 
-        this.mode = 0;
+    // Enemy storage
+    this.num_enemies = 4;
+    this.enemies = [];
+    this.enemy_speed = 0.0000001;
 
-        this.points = {
-            'x': [ 32, 128, 256, 384, 512, 608 ],
-            'y': [ 240, 240, 240, 240, 240, 240 ]
-        };
+    // Path storage
+    this.num_paths = 4;
+    this.enemy_y_points = [];
+    this.enemy_paths = {};
+    this.x_bounds = [ (size.width-25), 25 ];
 
-        this.pi = 0;
-        this.path = [];
+    // Engine stuff
+    this.previous_time = 0;
+    this.current_time = 0;
 
-    };
+    this.pi = 0;
+};
 
-    PhaserGame.prototype = {
+PhaserGame.prototype = {
 
-        init: function () {
+    init: function () {
 
-            this.game.renderer.renderSession.roundPixels = true;
-            this.stage.backgroundColor = '#204090';
+        this.game.renderer.renderSession.roundPixels = true;
+        this.stage.backgroundColor = '#204090';
 
-        },
+    },
 
-        preload: function () {
+    preload: function () {
 
-            //  We need this because the assets are on Amazon S3
-            //  Remove the next 2 lines if running locally
-            this.load.baseURL = 'http://files.phaser.io.s3.amazonaws.com/codingtips/issue008/';
-            this.load.crossOrigin = 'anonymous';
+        //  We need this because the assets are on Amazon S3
+        //  Remove the next 2 lines if running locally
+        this.load.baseURL = 'http://files.phaser.io.s3.amazonaws.com/codingtips/issue008/';
+        this.load.crossOrigin = 'anonymous';
 
-            this.load.image('alien', 'assets/ufo.png');
-            this.load.bitmapFont('shmupfont', 'assets/shmupfont.png', 'assets/shmupfont.xml');
+        this.load.image('alien', 'assets/ufo.png');
+        //this.load.bitmapFont('shmupfont', 'assets/shmupfont.png', 'assets/shmupfont.xml');
 
-            //  Note: Graphics are not for use in any commercial project
+        //  Note: Graphics are not for use in any commercial project
 
-        },
+    },
 
-        create: function () {
+    create: function () {
 
-            this.bmd = this.add.bitmapData(this.game.width, this.game.height);
-            this.bmd.addToWorld();
+        this.bmd = this.add.bitmapData(this.game.width, this.game.height);
+        this.bmd.addToWorld();
 
-            this.alien = this.add.sprite(0, 0, 'alien');
-            this.alien.anchor.set(0.5);
+        // -----------
+        // Setup Enemy paths
+        // -----------
+        this.num_paths = 4;
+        var path_interval = game.width / (this.num_paths + 1);
 
-            var py = this.points.y;
+        // Generate enemy y values
+        for (var i = 0; i < this.num_paths; i++)
+        {
+            this.enemy_y_points[i] = (path_interval * i) + path_interval;
+        }
 
-            for (var i = 0; i < py.length; i++)
+        // ----------
+        // Setup initial enemies
+        // ----------
+        var midpoint = game.width /2 ;
+        for (var i = 0; i < this.num_enemies; i++)
+        {
+            this.enemies[i] = this.add.sprite(this.x_bounds[0], this.enemy_y_points[i], 'alien');
+            this.enemies[i].anchor.set(0.5);
+        }
+
+        this.genPaths();
+
+    },
+
+    genPaths: function () {
+
+        this.bmd.clear();
+
+        this.enemy_paths= {};
+
+        var x = 1 / game.width;
+
+        // Generate points for each path
+        for (var i = 0; i < this.num_paths; i++)
+        {
+            // Create new array
+            this.enemy_paths[i] = [];
+
+            // Generate ponts
+            for (var j = 0; j <= 1; j += x)
             {
-                py[i] = this.rnd.between(32, 432);
-            }
+                var px = this.math.linearInterpolation(this.x_bounds, j);
+                var py = this.enemy_y_points[i];
 
-            this.hint = this.add.bitmapText(8, 444, 'shmupfont', "Linear", 24);
-
-            this.input.onDown.add(this.changeMode, this);
-
-            this.plot();
-
-        },
-
-        changeMode: function () {
-
-            this.mode++;
-
-            if (this.mode === 3)
-            {
-                this.mode = 0;
-            }
-
-            if (this.mode === 0)
-            {
-                this.hint.text = "Linear";
-            }
-            else if (this.mode === 1)
-            {
-                this.hint.text = "Bezier";
-            }
-            else if (this.mode === 2)
-            {
-                this.hint.text = "Catmull Rom";
-            }
-
-            this.plot();
-
-        },
-
-        plot: function () {
-
-            this.bmd.clear();
-
-            this.path = [];
-
-            var x = 1 / game.width;
-
-            for (var i = 0; i <= 1; i += x)
-            {
-                if (this.mode === 0)
-                {
-                    var px = this.math.linearInterpolation(this.points.x, i);
-                    var py = this.math.linearInterpolation(this.points.y, i);
-                }
-                else if (this.mode === 1)
-                {
-                    var px = this.math.bezierInterpolation(this.points.x, i);
-                    var py = this.math.bezierInterpolation(this.points.y, i);
-                }
-                else if (this.mode === 2)
-                {
-                    var px = this.math.catmullRomInterpolation(this.points.x, i);
-                    var py = this.math.catmullRomInterpolation(this.points.y, i);
-                }
-
-                this.path.push( { x: px, y: py });
+                this.enemy_paths[i].push( { x: px, y: py });
 
                 this.bmd.rect(px, py, 1, 1, 'rgba(255, 255, 255, 1)');
             }
+        }
+    },
 
-            for (var p = 0; p < this.points.x.length; p++)
-            {
-                this.bmd.rect(this.points.x[p]-3, this.points.y[p]-3, 6, 6, 'rgba(255, 0, 0, 1)');
-            }
+    update: function () {
 
-        },
+        // Get current time and calculate delta
+        this.current_time = this.game.time.time;
+        var dt = this.current_time - this.previous_time;
 
-        update: function () {
-
-            this.alien.x = this.path[this.pi].x;
-            this.alien.y = this.path[this.pi].y;
-
-            this.pi++;
-
-            if (this.pi >= this.path.length)
-            {
-                this.pi = 0;
-            }
-
+        // Update enemy paths
+        for (var i = 0; i < this.num_enemies; i++)
+        {
+            if (this.enemies[i].x > this.x_bounds[1])
+                this.enemies[i].x = this.enemies[i].x - (this.enemy_speed * dt);
         }
 
-    };
+        //
 
-    game.state.add('Game', PhaserGame, true);
+
+        this.pi++;
+
+        if (this.pi >= this.enemy_paths[0].length)
+        {
+            this.pi = 0;
+        }
+
+        // Store previous time
+        this.previous_time = this.current_time;
+    }
+
+};
+
+game.state.add('Game', PhaserGame, true);
