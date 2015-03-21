@@ -27,13 +27,14 @@ function getAirPollution($lat, $long)
 
   $data = fetch_defra($location, 'last_hour');
 
-  foreach($data as $item)
+  $total = 0;
+
+  foreach($data['data'] as $item)
   {
-    print_r($item);
-    echo '<br/><br/>';
+    $total = $total + $item['measurement'];
   }
 
-  return json_encode($data);
+  return json_encode(array('airPollution'=>$total));
 
 }
 // =================================================================
