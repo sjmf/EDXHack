@@ -21,7 +21,8 @@ $app->post('/getPollution', function(Request $request) use($app, $DEFRA_TOON){
 
 $app->get('/', function() use ($DEFRA_TOON){
 
-  return getAirPollution('567', '5678');
+  // return getAirPollution('567', '5678');
+  return getNoisePollution('5678', '678');
 });
 
 // =================================================================
@@ -41,7 +42,10 @@ function getAirPollution($lat, $long)
 // =================================================================
 function getNoisePollution($lat, $long)
 {
-  
+  // Get the Noise pollution data from online and convert it to JSON
+  $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
+
+  return json_encode($data);
 }
 
 $app->run()
