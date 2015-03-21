@@ -97,7 +97,7 @@ PhaserGame.prototype = {
         // ----------
         // Setup input
         // ----------
-        this.input.mouse.onMouseDown(this.placeItem);
+        //this.input.mouse.onMouseDown(this.placeItem);
     },
 
     placeItems: function() {
