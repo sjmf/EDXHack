@@ -1,0 +1,4 @@
+#!/bin/bash
+
+(cd /home/sebastian/projects/EDXHack && ./composer.phar install)
+
