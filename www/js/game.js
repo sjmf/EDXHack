@@ -9,16 +9,19 @@ var PhaserGame = function () {
 
     this.bmd = null;
 
-    // Enemy storage
-    this.num_enemies = 4;
-    this.enemies = [];
-    this.enemy_speed = 0.1;
-
     // Path storage
     this.num_paths = 4;
     this.enemy_y_points = [];
     this.enemy_paths = {};
     this.x_bounds = [ (size.width-25), 25 ];
+
+    // Enemy storage
+    this.num_enemies = 4;
+    this.enemies = [];
+    this.enemy_speed = 0.1;
+
+    // Perfect city storage
+    this.perfect_cities = [];
 
     // Engine stuff
     this.previous_time = 0;
@@ -43,7 +46,8 @@ PhaserGame.prototype = {
         //this.load.baseURL = 'http://files.phaser.io.s3.amazonaws.com/codingtips/issue008/';
         //this.load.crossOrigin = 'anonymous';
 
-        this.load.image('alien', 'assets/Pol/1.png');
+        this.load.image('pollutionCloud', 'assets/Pol/1.png');
+        this.load.image('alien', 'assets/ufo.png')
         //this.load.bitmapFont('shmupfont', 'assets/shmupfont.png', 'assets/shmupfont.xml');
 
         //  Note: Graphics are not for use in any commercial project
@@ -65,6 +69,9 @@ PhaserGame.prototype = {
         for (var i = 0; i < this.num_paths; i++)
         {
             this.enemy_y_points[i] = (path_interval * i) + path_interval;
+
+            // Setup path's perfect city
+            this.perfect_cities[i] = this.add.sprite(this.x_bounds[1], this.enemy_y_points[i], 'alien');
         }
 
         // ----------
@@ -73,12 +80,12 @@ PhaserGame.prototype = {
         var midpoint = game.width /2 ;
         for (var i = 0; i < this.num_enemies; i++)
         {
-            this.enemies[i] = this.add.sprite(this.x_bounds[0], this.enemy_y_points[i], 'alien');
+            this.enemies[i] = this.add.sprite(this.x_bounds[0], this.enemy_y_points[i], 'pollutionCloud');
             this.enemies[i].anchor.set(0.5);
         }
 
+        // 
         this.genPaths();
-
     },
 
     genPaths: function () {
