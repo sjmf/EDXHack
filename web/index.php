@@ -11,11 +11,10 @@ $app['debug'] = true;
 
 // Function and page definitions
 
-$app->get('/', function() use ($DEFRA_TOON){
+$app->get('/', function(){
 
-  // return getAirPollution('567', '5678');
-  // print_r(fetch_defra('ACTH','last_hour'));
-  return getNoisePollution('5678', '678');
+  return getAirPollution('567', '5678');
+  // return 'end';
 });
 
 // =================================================================
@@ -24,11 +23,17 @@ $app->get('/', function() use ($DEFRA_TOON){
 function getAirPollution($lat, $long)
 {
   // Use Lat and Long to determine the location
-  $location = '';
+  $location = 'ACTH';
 
   $data = fetch_defra($location, 'last_hour');
 
+  foreach($data as $item)
+  {
+    print_r($item);
+    echo '<br/><br/>';
+  }
 
+  return json_encode($data);
 
 }
 // =================================================================
