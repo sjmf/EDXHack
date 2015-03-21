@@ -5,15 +5,21 @@ require __DIR__.'/../parse_defra.php';
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+
 $app = new Silex\Application();
 $app['debug'] = true;
 
+// Register the template engine to render pages
+// Register TWIG to use templates
+$app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __DIR__.'/views',));
 
 // Function and page definitions
 
-$app->get('/', function(){
+$app->get('/', function() use($app){
 
-  return getAirPollution('567', '5678');
+  return $app['twig']->render('index.twig', array());
+
+  // return getAirPollution('567', '5678');
   // return 'end';
 });
 

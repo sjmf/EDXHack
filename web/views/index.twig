@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div id='demo' />
+
+
+
+    <script>
+      var x = document.getElementById("demo");
+      getLocation();
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(sendToServer);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+      }
+
+      function sendToServer(position)
+      {
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+
+        var data = {lat:lat, long:long};
+        data = JSON.stringify(data);
+
+        $.ajax({
+          url:'/geo',
+          method:'POST',
+          type: 'application/JSON',
+          data: data,
+          success: function(response){
+            alert(JSON.parse(response));
+          },
+          error: function(response){
+            alert("Something has went terribly wrong");
+          }
+        });
+      }
+    </script>
+  </body>
+
+</html>
