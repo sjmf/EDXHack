@@ -50,7 +50,7 @@ PhaserGame.prototype = {
         this.load.image('pollutionCloud', 'assets/Pol/1.png');
         
         // Add city images
-        this.load.image('newc', 'assets/back.newcastle.png');
+        this.load.image('newc', 'assets/back/newcastle.png');
         this.load.image('lond', 'assets/back/london.png');
         cities = [ 'newc', 'lond' ];
     },
