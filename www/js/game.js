@@ -111,7 +111,8 @@ PhaserGame.prototype = {
 
                 this.enemy_paths[i].push( { x: px, y: py });
 
-                this.bmd.rect(px, py, 1, 1, 'rgba(255, 255, 255, 1)');
+                // For drawing the white path
+                //this.bmd.rect(px, py, 1, 1, 'rgba(255, 255, 255, 1)');
             }
         }
     },
