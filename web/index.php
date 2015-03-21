@@ -1,5 +1,7 @@
 <?php
 // web/index.php
+require_once __DIR__.'/havercine.php';
+
 require_once __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/../parse_defra.php';
 use Symfony\Component\HttpFoundation\Request;
@@ -17,13 +19,19 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __
 
 $app->get('/', function() use($app){
 
-  // return $app['twig']->render('index.twig', array());
-  getNoisePollution(678, 678);
-
-  return 'Hello';
-  // return getAirPollution('567', '5678');
-  // return 'end';
+  return $app['twig']->render('index.twig', array());
 });
+
+$app->post('/geo', function(Request $request){
+    $data = json_decode($request->getContent());
+
+    $lat = $data->lat;
+    $long = $data->long;
+
+	$closest = getLocationFromPoint($lat,$long);
+	return $closest;
+});
+
 
 // =================================================================
 //  Get the Air Pollution Levels based off of Lat / Long Data
@@ -31,7 +39,7 @@ $app->get('/', function() use($app){
 function getAirPollution($lat, $long)
 {
   // Use Lat and Long to determine the location
-  $location = 'ACTH';
+  $location = getLocationFromPoint($lat, $long);
 
   $data = fetch_defra($location, 'last_hour');
 
@@ -81,6 +89,67 @@ function getNoisePollution($lat, $long)
   return json_encode(array('noisePollution'=>$pollution));
 }
 
-$app->run()
+// =================================================================
+// Get the nearest geolocated DEFRA data
+// =================================================================
+function getLocationFromPoint($lat, $long)
+{
+	global $closest;
+
+    $xml = simplexml_load_string(
+        //file_get_contents('http://uk-air.defra.gov.uk/assets/rss/current_site_levels.xml')
+    	file_get_contents('current_site_levels.xml'),
+		null,
+		LIBXML_NOCDATA
+	);
+
+    $closest = array();
+    foreach($xml->channel->item as $k=>$v) {
+		// Placename
+		$name = $v->title;
+
+		// DEFRA location tag (from URL)
+		$tag = parse_url($v->link)['query'];
+		$tag = explode('&',$tag)[0];
+		$tag = explode('=',$tag)[1];
+
+		// Geolocation (lat/long)
+		$view = $v->description;
+   		$view = preg_replace('!&deg;|&acute;|&quot;!',' ',$view);
+		$view = preg_replace('!Location: !','',$view);
+		$view = explode("<br />", $view)[0];
+
+		$view = explode("    ", $view);
+		$n = explode(' ', $view[0]);
+		$w = explode(' ', $view[1]);
+
+		$lat_city = round( $n[0] + $n[1] /60 + $n[2] /3600 ,5) ;
+		$long_city= round( $w[0] + $w[1] /60 + $w[2] /3600 ,5) * -1;
+
+		// Havercine distance
+		$user = new POI($lat, $long);
+		$poi = new POI($lat_city, $long_city);
+		$km = $user->getDistanceInMetersTo($poi) / 1000;
+
+		// Insert into array
+		$closest[$tag] = $km;
+
+		// Echo
+		//echo $name ."\n";
+		//echo $tag ."\n";
+		//echo implode(' ',$n) .' '. implode(' ',$w) ."\n";
+		//echo $lat .' '. $long ."\n";
+		//echo $km ."\n";
+	}
+
+	asort($closest);
+
+	$keys = array_keys($closest);
+	var_dump($closest[$keys[0]]);
+
+	return $keys[0];
+}
+
+$app->run();
 
 ?>
