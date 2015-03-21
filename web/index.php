@@ -52,18 +52,33 @@ function getNoisePollution($lat, $long)
 {
 
   // Get the Noise pollution data from online and convert it to JSON
-  $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
+  // $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
+  $data = array_map('str_getcsv', file('noise.csv'));
 
-  // Fill this with the keys passed down from Sam
-  $locationMap = array();
+  // Get the headers for the data and unset it from the data array for iteration
+  $headers = $data[0];
+  unset($data[0]);
 
-  // Get Location from the location map
-  
+  // Set up a locations array
+  $locations = array();
 
+  // Remap data to some nice key-value pairs inside of locations
+  foreach($data as $item)
+  {
+    $location = array();
+    for($i = 0; $i < count($item); $i++)
+    {
+      $location[$headers[$i]] = $item[$i];
+    }
+    array_push($locations, $location);
+  }
 
-  print_r($data[0]);
+  // Presume you have the location index mapped here
 
-  return json_encode($data);
+  // Get the Noise pollution
+  $pollution = $locations[$key]['Road_Pop_Lden>=65dB'];
+
+  return json_encode(array('noisePollution'=>$pollution));
 }
 
 $app->run()
