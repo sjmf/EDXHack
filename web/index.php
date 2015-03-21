@@ -1,27 +1,20 @@
 <?php
 // web/index.php
 require_once __DIR__.'/../vendor/autoload.php';
+require __DIR__.'/../parse_defra.php';
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 $app = new Silex\Application();
 $app['debug'] = true;
 
-$DEFRA_TOON = array_map('str_getcsv', file(__DIR__.'AirQualityDataHourly.csv'));
 
-// ... definitions
-$app->post('/getPollution', function(Request $request) use($app, $DEFRA_TOON){
-
-  // Parse request data
-  $data = json_decode($request->getContent());
-
-  return $DEFRA_TOON;
-
-});
+// Function and page definitions
 
 $app->get('/', function() use ($DEFRA_TOON){
 
   // return getAirPollution('567', '5678');
+  // print_r(fetch_defra('ACTH','last_hour'));
   return getNoisePollution('5678', '678');
 });
 
@@ -30,11 +23,12 @@ $app->get('/', function() use ($DEFRA_TOON){
 // =================================================================
 function getAirPollution($lat, $long)
 {
-  $feed = implode(file('http://uk-air.defra.gov.uk/assets/rss/current_site_levels.xml'));
-  $xml = simplexml_load_string($feed);
-  $json = json_encode($xml);
+  // Use Lat and Long to determine the location
+  $location = '';
 
-  return $json;
+  $data = fetch_defra($location, 'last_hour');
+
+
 
 }
 // =================================================================
