@@ -11,7 +11,7 @@ $app['debug'] = true;
 
 // Function and page definitions
 
-$app->get('/', function() use ($DEFRA_TOON){
+$app->get('/api/', function() use ($DEFRA_TOON){
 
   // return getAirPollution('567', '5678');
   // print_r(fetch_defra('ACTH','last_hour'));
