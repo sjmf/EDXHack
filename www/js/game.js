@@ -276,15 +276,15 @@ window.Game.PhaserGame.prototype = {
 
     pollKeyboard: function() {
 
-        if (this.keyboard.isDown(Phaser.Keyboard.ONE))
+        if (this.keyboard.isDown(1))
         {
             console.log("one");
         }
-        if (this.keyboard.isDown(Phaser.keyboard.TWO))
+        if (this.keyboard.isDown(2))
         {
             console.log("two");
         }
-        if (this.keyboard.isDown(Phaser.keyboard.THREE))
+        if (this.keyboard.isDown(3))
         {
             console.log("three");
         }
