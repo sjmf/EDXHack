@@ -128,10 +128,9 @@ PhaserGame.prototype = {
 
         // Place the item
         this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'pollutionCloud'));
-        console.log(this.lane_y_points[minIndex] + " test");
 
 
-        console.log(x + " " + y);
+        console.log(x + " " + y + " at lane y " + this.lane_y_points[minIndex]);
     },
 
     genPaths: function () {
