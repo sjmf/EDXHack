@@ -181,6 +181,7 @@ PhaserGame.prototype = {
                 if (i == this.enemies.length-1)
                     this.printed = 1;
             }
+            else console.log(this.printed);
         }
 
         // 
