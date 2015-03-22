@@ -28,6 +28,7 @@ window.Game.PhaserGame = function () {
     // Player storage
     this.num_items = [ 0, 0, 0 ];
     this.items = [];
+    this.item_mode = 0;
 
     // Perfect city storage
     this.perfect_cities = [];
@@ -56,7 +57,7 @@ window.Game.PhaserGame.prototype = {
         //this.load.crossOrigin = 'anonymous';
 
         // Add enemy images
-        this.load.image('pollutionCloud', 'assets/Pol/1.png');
+        this.load.image('PollutionCloud', 'assets/Pol/1.png');
         
         // Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
@@ -99,8 +100,7 @@ window.Game.PhaserGame.prototype = {
         var midpoint = game.width /2 ;
         for (var i = 0; i < this.num_initial_enemies; i++)
         {
-            this.enemies.push(this.add.sprite(this.x_bounds[0], this.lane_y_points[i], 'pollutionCloud'));
-            this.enemies[i].anchor.set(0.5);
+            this.createEnemy('PollutionCloud', i);
         }
 
         // 
@@ -112,6 +112,24 @@ window.Game.PhaserGame.prototype = {
         this.game.input.onDown.add(this.placeItems, this);
 
         this.printed = 0;
+    },
+
+    createEnemy: function(type, lane) {
+
+        this.enemies.push(this.add.sprite(this.x_bounds[0], this.lane_y_points[lane], type));
+        this.enemies[ this.enemies.length - 1 ].anchor.set(0.5);
+        switch (type)
+        {
+            case "GasMask":
+                this.enemies[ this.enemies.length - 1 ].health = 50;
+                break;
+            case "GarbageBag":
+                this.enemies[ this.enemies.length - 1 ].health = 50;
+                break;
+            case "PollutionCloud":
+                this.enemies[ this.enemies.length - 1 ].health = 50;
+                break;
+        }
     },
 
     placeItems: function() {
@@ -132,7 +150,27 @@ window.Game.PhaserGame.prototype = {
         }
 
         // Place the item
-        this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'pollutionCloud'));
+        this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'PollutionCloud'));
+
+        // Set it's properties based on current item mode
+        switch (this.item_mode)
+        {
+            case 0:
+                this.items[ this.items.length - 1 ].perm = 0;
+                this.items[ this.items.length - 1 ].damage = 10;
+                this.items[ this.items.length - 1 ].timer = 0;
+                break;
+            case 1:
+                this.items[ this.items.length - 1 ].perm = 1;
+                this.items[ this.items.length - 1 ].damage = 10;
+                this.items[ this.items.length - 1 ].timer = 60;
+                break;
+            case 2:
+                this.items[ this.items.length - 1 ].perm = 1;
+                this.items[ this.items.length - 1 ].damage = 10;
+                this.items[ this.items.length - 1 ].timer = 120;
+                break;
+        }
 
 
         console.log(x + " " + y + " at lane y " + this.lane_y_points[minIndex]);
@@ -187,7 +225,17 @@ window.Game.PhaserGame.prototype = {
             {
                 var distance = Math.sqrt(Math.pow(this.enemies[i].x - this.items[j].x,2) + Math.pow(this.enemies[i].y - this.items[j].y,2));
                 if (distance < 25)
-                    console.log("hit");
+                {
+                    if (this.items[j].perm == 0)
+                    {
+                        this.enemies[i].health = this.enemies[i].health - this.items[j].damage;
+                        console.log(this.enemies[i].health);
+                        if (this.enemies[i].health <= 0)
+                        {
+                            this.enemies = this.enemies.splice(i, 1);
+                        }
+                    }
+                }
             }
         }
 
