@@ -175,7 +175,7 @@ window.Game.PhaserGame.prototype = {
             this.item_mode = 1;
         }
         else
-        {g
+        {
             // Calculate distances between the lanes and the click to determine which lane was clicked
             var minDistance = Number.MAX_VALUE;
             var minIndex = 0;
