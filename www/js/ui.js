@@ -16,7 +16,7 @@ util.achieve = function(msg, type) {
 
 
 
-setInterval(function(){
+/*setInterval(function(){
     // random things!
     
     var msgs = [
@@ -29,4 +29,4 @@ setInterval(function(){
     
     util.achieve(msgs[r].m, msgs[r].t);
     
-}, 5000);
+}, 5000);*/
