@@ -30,8 +30,6 @@ var PhaserGame = function () {
     // Engine stuff
     this.previous_time = 0;
     this.current_time = 0;
-
-    this.pi = 0;
 };
 
 PhaserGame.prototype = {
@@ -79,7 +77,7 @@ PhaserGame.prototype = {
         // Generate enemy y values
         for (var i = 0; i < this.num_lanes; i++)
         {
-            this.lane_y_points[i] = (path_interval * i) + path_interval;
+            this.lane_y_points[i] = (path_interval * i) + path_interval/2;
 
             // Setup path's perfect city
             this.perfect_cities[i] = this.add.sprite(this.x_bounds[1], this.lane_y_points[i], cities[i]);
