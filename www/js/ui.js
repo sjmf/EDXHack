@@ -11,8 +11,8 @@ util.achieve = function(msg, type) {
     setTimeout(function(){$msg.addClass('out');setTimeout(function(){$msg.remove()},2000)}, 3000);
 };
 
-setTimeout(function(){window.Game.util.acheive('Play!','success');},3000);
-setTimeout(function(){window.Game.util.acheive('Oh noes!','success');},5000);
+//setTimeout(function(){window.Game.util.achieve('Play!','success');},3000);
+//setTimeout(function(){window.Game.util.achieve('Oh noes!','success');},5000);
 
 
 
