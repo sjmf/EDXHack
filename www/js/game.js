@@ -7,9 +7,6 @@ var game = new Phaser.Game(size.width, size.height, Phaser.AUTO, 'game');
 
 var PhaserGame = function () {
 
-    console.log(size.width);
-    console.log(size.height);
-
     this.bmd = null;
 
     // Path storage
@@ -68,6 +65,9 @@ PhaserGame.prototype = {
 
         this.bmd = this.add.bitmapData(this.game.width, this.game.height);
         this.bmd.addToWorld();
+
+            console.log(size.width);
+    console.log(size.height);
 
         //
         this.background = this.add.tileSprite(0, 0, game.width, game.height, 'background');
