@@ -7,6 +7,9 @@ var game = new Phaser.Game(size.width, size.height, Phaser.AUTO, 'game');
 
 var PhaserGame = function () {
 
+    console.log(size.width);
+    console.log(size.height);
+
     this.bmd = null;
 
     // Path storage
