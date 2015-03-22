@@ -52,7 +52,7 @@ $app->post('/gameParams', function(Request $request){
 function getAirPollution($lat, $long)
 {
   // Use Lat and Long to determine the location
-  $location = 'ACTH';
+  $location = getLocationFromPoint($lat, $long);
 
   $data = fetch_defra($location, 'last_hour');
 
@@ -67,18 +67,43 @@ function getAirPollution($lat, $long)
 
 }
 // =================================================================
-//  Get the Noise Pollution
+//  Get the Noise Pollution based off of lat long data
 // =================================================================
 function getNoisePollution($lat, $long)
 {
-  // Get the Noise pollution data from online and convert it to JSON
-  $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
 
-  return json_encode($data);
+  // Get the Noise pollution data from online and convert it to JSON
+  // $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
+  $data = array_map('str_getcsv', file('noise.csv'));
+
+  // Get the headers for the data and unset it from the data array for iteration
+  $headers = $data[0];
+  unset($data[0]);
+
+  // Set up a locations array
+  $locations = array();
+
+  // Remap data to some nice key-value pairs inside of locations
+  foreach($data as $item)
+  {
+    $location = array();
+    for($i = 0; $i < count($item); $i++)
+    {
+      $location[$headers[$i]] = $item[$i];
+    }
+    array_push($locations, $location);
+  }
+
+  // Presume you have the location index mapped here
+
+  // Get the Noise pollution
+  $pollution = $locations[$key]['Road_Pop_Lden>=65dB'];
+
+  return json_encode(array('noisePollution'=>$pollution));
 }
 
 // =================================================================
-// Get the nearest geolocated DEFRA data 
+// Get the nearest geolocated DEFRA data
 // =================================================================
 function getLocationFromPoint($lat, $long)
 {
@@ -110,15 +135,15 @@ function getLocationFromPoint($lat, $long)
 		$view = explode("    ", $view);
 		$n = explode(' ', $view[0]);
 		$w = explode(' ', $view[1]);
-	
+
 		$lat_city = round( $n[0] + $n[1] /60 + $n[2] /3600 ,5) ;
 		$long_city= round( $w[0] + $w[1] /60 + $w[2] /3600 ,5) * -1;
-		
+
 		// Havercine distance
 		$user = new POI($lat, $long);
 		$poi = new POI($lat_city, $long_city);
 		$km = $user->getDistanceInMetersTo($poi) / 1000;
-		
+
 		// Insert into array
 		$closest[$tag] = $km;
 
@@ -129,12 +154,12 @@ function getLocationFromPoint($lat, $long)
 		//echo $lat .' '. $long ."\n";
 		//echo $km ."\n";
 	}
-	
+
 	asort($closest);
-	
+
 	$keys = array_keys($closest);
 	var_dump($closest[$keys[0]]);
-    
+
 	return $keys[0];
 }
 
