@@ -119,7 +119,7 @@ window.Game.PhaserGame.prototype = {
         // Setup menu bar
         // ----------
         var midpoint = game.width / 2;
-        var midpoint_height = game.height - 40;
+        var midpoint_height = game.height - 150;
         this.panel = this.add.sprite(midpoint - 40, midpoint_height, 'Panel');
         this.GasMask_button = this.add.sprite(midpoint - 40, midpoint_height, 'GasMask');
         this.GarbageBin_button = this.add.sprite(midpoint + 40, midpoint_height, 'GarbageBin');
