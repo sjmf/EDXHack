@@ -121,6 +121,7 @@ window.Game.PhaserGame.prototype = {
         // Setup input
         // ----------
         this.game.input.onDown.add(this.placeItems, this);
+        this.keyboard = this.game.input.keyboard;
 
         this.printed = 0;
     },
@@ -266,8 +267,27 @@ window.Game.PhaserGame.prototype = {
             }
         }
 
+        // Poll the keyboard
+        pollKeyboard();
+
         // Store previous time
         this.previous_time = this.current_time;
+    },
+
+    pollKeyboard: function() {
+
+        if (this.keyboard.isDown(Phaser.Keyboard.ONE))
+        {
+            console.log("one");
+        }
+        if (this.keyboard.isDown(Phaser.keyboard.TWO))
+        {
+            console.log("two");
+        }
+        if (this.keyboard.isDown(Phaser.keyboard.THREE))
+        {
+            console.log("three");
+        }
     }
 
 };
