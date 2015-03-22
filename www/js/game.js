@@ -248,8 +248,8 @@ window.Game.PhaserGame.prototype = {
                     this.cities[j].health = this.cities[j].health - this.enemies[i].dmg;
                     if (this.cities[j].health <= 0)
                     {
+                        this.cities[j].exists = false;
                         this.cities[j].destroy(true);
-                        this.cities = this.cities.splice(j, 1);
                         G.util.achieve('Your city has been destroyed','danger');
                     }
                     this.enemies[i].destroy(true);
