@@ -5,7 +5,7 @@ window.Game.size = {
     height: window.innerHeight || document.body.clientHeight
 }    
 
-window.Game.game = new Phaser.Game(size.width, size.height, Phaser.AUTO, 'game');
+window.Game.game = new Phaser.Game(window.Game.size.width, window.Game.size.height, Phaser.AUTO, 'game');
 
 window.Game.PhaserGame = function () {
 
@@ -16,7 +16,7 @@ window.Game.PhaserGame = function () {
     this.num_lanes = 4;
     this.lane_y_points = [];
     this.enemy_paths = {};
-    this.x_bounds = [ (size.width-25), 25 ];
+    this.x_bounds = [ (window.Game.size.width-25), 25 ];
 
     // Enemy storage
     this.num_initial_enemies = 4;
