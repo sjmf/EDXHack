@@ -1,4 +1,5 @@
 window.Game = {};
+var G = window.Game;
 
 window.Game.size = {
     width: window.innerWidth || document.body.clientWidth,
@@ -241,7 +242,12 @@ window.Game.PhaserGame.prototype = {
                 // Check for overlap
                 if (this.enemies[i].overlap(this.cities[j]))
                 {
-                    this.cities[j].damage(this.enemies[i].dmg);
+                    this.cities[j].health = this.cities[j].health - this.enemies[i].dmg;
+                    if (this.cities[j].health <= 0)
+                    {
+                        G.util.achieve('Your city has been destroyed','danger');
+                    }
+                    this.enemies[i].destroy(true);
                 }
             }
         }
