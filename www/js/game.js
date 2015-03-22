@@ -121,7 +121,7 @@ window.Game.PhaserGame.prototype = {
         var midpoint = game.width / 2;
         var midpoint_height = game.height - 150;
         this.panel = this.add.sprite(midpoint - 100, midpoint_height, 'Panel');
-        this.GasMask_button = this.add.sprite((midpoint - 95), (midpoint_height+10), 'GasMask');
+        this.GasMask_button = this.add.sprite((midpoint - 9gi5), (midpoint_height+10), 'GasMask');
         this.GasMask_button.scale.set(4.0);
         this.GarbageBin_button = this.add.sprite((midpoint + 15), (midpoint_height+10), 'GarbageBin');
         this.GarbageBin_button.scale.set(4.0);
@@ -162,6 +162,18 @@ window.Game.PhaserGame.prototype = {
     placeItems: function() {
         var x = this.game.input.activePointer.x;
         var y = this.game.input.activePointer.y;
+
+        // First check if we clicked on the panel or not
+        var GasMask_dist = Math.sqrt(Math.pow(x - GasMask_button.x,2) + Math.pow(y - GasMask_button.y));
+        var GarbageBin_dist = Math.sqrt(Math.pow(x - GarbageBin_button.x,2) + Math.pow(y - GarbageBin_button.y));
+        if (GasMask_dist < 35)
+        {
+            this.item_mode = 0;
+        }
+        else if (GarbageBin_dist < 35)
+        {
+            this.item_mode = 1;
+        }
 
         // Calculate distances between the lanes and the click to determine which lane was clicked
         var minDistance = Number.MAX_VALUE;
