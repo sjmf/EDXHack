@@ -121,10 +121,10 @@ window.Game.PhaserGame.prototype = {
         var midpoint = game.width / 2;
         var midpoint_height = game.height - 150;
         this.panel = this.add.sprite(midpoint - 100, midpoint_height, 'Panel');
-        this.GasMask_button = this.add.sprite((midpoint - 250), midpoint_height, 'GasMask');
-        this.GasMask_button.scale.set(3.0);
-        this.GarbageBin_button = this.add.sprite((midpoint + 250), midpoint_height, 'GarbageBin');
-        this.GarbageBin_button.scale.set(3.0);
+        this.GasMask_button = this.add.sprite((midpoint - 150), midpoint_height, 'GasMask');
+        this.GasMask_button.scale.set(4.0);
+        this.GarbageBin_button = this.add.sprite((midpoint + 150), midpoint_height, 'GarbageBin');
+        this.GarbageBin_button.scale.set(4.0);
 
 
         // 
