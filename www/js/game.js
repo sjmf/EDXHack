@@ -228,15 +228,12 @@ window.Game.PhaserGame.prototype = {
                 {
                     if (this.items[j].perm == 0)
                     {
-                        this.enemies[i].health = this.enemies[i].health - this.items[j].damage;
-                        console.log(this.enemies[i].health);
-                        if (this.enemies[i].health <= 0)
-                        {
-                            this.enemies[i].destroy(true);
-                            this.items[j].destroy(true);
-                            //this.enemies = this.enemies.splice(i, 1);
-                            //this.items = this.items.splice(j, 1);
-                        }
+                        this.items[j].destroy(true);
+                        this.enemies[i].damage(this.items[j].damage);
+                    }
+                    else
+                    {
+                        this.enemies[i].damage(this.items[j].damage);
                     }
                 }
             }
