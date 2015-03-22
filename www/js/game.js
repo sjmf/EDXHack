@@ -66,9 +66,6 @@ PhaserGame.prototype = {
         this.bmd = this.add.bitmapData(this.game.width, this.game.height);
         this.bmd.addToWorld();
 
-            console.log(size.width);
-    console.log(size.height);
-
         //
         this.background = this.add.tileSprite(0, 0, game.width, game.height, 'background');
         this.background.fixedToCamera = true;
@@ -77,7 +74,7 @@ PhaserGame.prototype = {
         // Setup Enemy paths
         // -----------
         this.num_lanes = 4;
-        var path_interval = game.width / (this.num_lanes + 1);
+        var path_interval = game.height / (this.num_lanes + 1);
 
         // Generate enemy y values
         for (var i = 0; i < this.num_lanes; i++)
