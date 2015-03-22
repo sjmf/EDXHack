@@ -3,9 +3,11 @@ window.Game = {};
 window.Game.size = {
     width: window.innerWidth || document.body.clientWidth,
     height: window.innerHeight || document.body.clientHeight
-}    
+}
+var size = window.Game.size;
 
-window.Game.game = new Phaser.Game(window.Game.size.width, window.Game.size.height, Phaser.AUTO, 'game');
+window.Game.game = new Phaser.Game(size.width, size.height, Phaser.AUTO, 'game');
+var game = window.Game.game;
 
 window.Game.PhaserGame = function () {
 
@@ -16,7 +18,7 @@ window.Game.PhaserGame = function () {
     this.num_lanes = 4;
     this.lane_y_points = [];
     this.enemy_paths = {};
-    this.x_bounds = [ (window.Game.size.width-25), 25 ];
+    this.x_bounds = [ (size.width-25), 25 ];
 
     // Enemy storage
     this.num_initial_enemies = 4;
@@ -36,6 +38,7 @@ window.Game.PhaserGame = function () {
 
     this.printed = 0;
 };
+var PhaserGame = window.Game.PhaserGame;
 
 window.Game.PhaserGame.prototype = {
 
@@ -186,4 +189,4 @@ window.Game.PhaserGame.prototype = {
 
 };
 
-window.Game.game.state.add('Game', window.Game.PhaserGame, true);
+game.state.add('Game', window.Game.PhaserGame, true);
