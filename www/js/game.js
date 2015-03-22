@@ -22,7 +22,6 @@ window.Game.PhaserGame = function () {
     this.x_bounds = [ (size.width-25), 25 ];
 
     // Enemy storage
-    this.num_initial_enemies = 4;
     this.enemies = [];
     this.enemy_speed = 0.1;
 
@@ -109,14 +108,6 @@ window.Game.PhaserGame.prototype = {
             this.cities[i].death_message = 0;
             this.cities[i].width = 100;
             this.cities[i].height = 70;
-        }
-
-        // ----------
-        // Setup initial enemies
-        // ----------
-        for (var i = 0; i < this.num_initial_enemies; i++)
-        {
-            this.createEnemy('PollutionCloud', i);
         }
 
         // ----------
