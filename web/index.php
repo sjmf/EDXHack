@@ -19,7 +19,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __
 
 $app->get('/', function() use($app){
 
-  return $app['twig']->render('index.twig', array());
+  return $app['twig']->render('geo.twig', array());
 });
 
 $app->post('/geo', function(Request $request){
@@ -32,6 +32,19 @@ $app->post('/geo', function(Request $request){
 	return $closest;
 });
 
+$app->post('/gameParams', function(Request $request){
+    $data = json_decode($request->getContent());
+
+    $lat = $data->lat;
+    $long = $data->long;
+
+	$closest = getLocationFromPoint($lat,$long);
+	
+	$data = fetch_defra($closest);
+	var_dump($data);
+
+	return $closest;
+});
 
 // =================================================================
 //  Get the Air Pollution Levels based off of Lat / Long Data
@@ -72,8 +85,8 @@ function getLocationFromPoint($lat, $long)
 	global $closest;
 
     $xml = simplexml_load_string(
-        //file_get_contents('http://uk-air.defra.gov.uk/assets/rss/current_site_levels.xml')
-    	file_get_contents('current_site_levels.xml'),
+        file_get_contents('http://uk-air.defra.gov.uk/assets/rss/current_site_levels.xml'),
+    	//file_get_contents('current_site_levels.xml'),
 		null,
 		LIBXML_NOCDATA
 	);
