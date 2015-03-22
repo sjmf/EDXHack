@@ -82,6 +82,7 @@ function getNoisePollution($lat, $long)
   }
 
   // Presume you have the location index mapped here
+  
 
   // Get the Noise pollution
   $pollution = $locations[$key]['Road_Pop_Lden>=65dB'];
