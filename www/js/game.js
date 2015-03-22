@@ -127,7 +127,6 @@ window.Game.PhaserGame.prototype = {
 		);
 		this.enemies[ this.enemies.length - 1 ].scale.set(4.0);
         this.enemies[ this.enemies.length - 1 ].anchor.set(0.5);
-        
 		switch (type)
         {
             case "NoisePollution":
@@ -158,33 +157,24 @@ window.Game.PhaserGame.prototype = {
             }
         }
 
-        // Place the item
-        this.items.push(
-			this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask')
-		);
-
-        this.items[ this.items.length - 1 ].scale.set(4.0);
 
         // Set it's properties based on current item mode
         switch (this.item_mode)
         {
             case 0:
-                this.items[ this.items.length - 1 ].perm = 0;
-                this.items[ this.items.length - 1 ].dmg = 10;
-                this.items[ this.items.length - 1 ].timer = 0;
+                this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask'));
+				this.items[ this.items.length - 1 ].perm = 0;
                 break;
             case 1:
+                this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GarbageBin'));
                 this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].dmg = 10;
-                this.items[ this.items.length - 1 ].timer = 60;
-                break;
-            case 2:
-                this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].dmg = 10;
-                this.items[ this.items.length - 1 ].timer = 120;
                 break;
         }
 
+		this.items[ this.items.length - 1 ].scale.set(4.0);
+		this.items[ this.items.length - 1 ].anchor.set(0.5);
+		this.items[ this.items.length - 1 ].dmg = 10;
+		this.items[ this.items.length - 1 ].timer = 0;
 
         console.log(x + " " + y + " at lane y " + this.lane_y_points[minIndex]);
     },
@@ -258,6 +248,7 @@ window.Game.PhaserGame.prototype = {
                     this.cities[j].health = this.cities[j].health - this.enemies[i].dmg;
                     if (this.cities[j].health <= 0)
                     {
+                        this.cities[j].destroy(true);
                         G.util.achieve('Your city has been destroyed','danger');
                     }
                     this.enemies[i].destroy(true);
