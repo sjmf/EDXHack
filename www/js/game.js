@@ -127,7 +127,8 @@ window.Game.PhaserGame.prototype = {
 		);
 		this.enemies[ this.enemies.length - 1 ].scale.set(4.0);
         this.enemies[ this.enemies.length - 1 ].anchor.set(0.5);
-        switch (type)
+        
+		switch (type)
         {
             case "NoisePollution":
                 this.enemies[ this.enemies.length - 1 ].health = 50;
@@ -161,6 +162,8 @@ window.Game.PhaserGame.prototype = {
         this.items.push(
 			this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask')
 		);
+
+        this.items[ this.items.length - 1 ].scale.set(4.0);
 
         // Set it's properties based on current item mode
         switch (this.item_mode)
