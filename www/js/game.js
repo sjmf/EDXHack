@@ -61,7 +61,11 @@ window.Game.PhaserGame.prototype = {
 		
 		// Add defense images
 		this.load.image('GasMask', 'assets/gas/gas.png');
+        this.load.image('GarbageBin', 'assets/bag/bag1.png');
 		this.load.image('SpeedLimit', 'assets/sign/sign.png');
+
+        // Add panel image
+        this.load.image('Panel', 'assets/back/chest.png');
         
 		// Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
@@ -106,11 +110,19 @@ window.Game.PhaserGame.prototype = {
         // ----------
         // Setup initial enemies
         // ----------
-        var midpoint = game.width /2 ;
         for (var i = 0; i < this.num_initial_enemies; i++)
         {
             this.createEnemy('PollutionCloud', i);
         }
+
+        // ----------
+        // Setup menu bar
+        // ----------
+        var midpoint = game.width / 2;
+        this.panel = this.add.sprite(midpoint - 40, this.height - 40, 'Panel');
+        this.GasMask_button = this.add.sprite(midpoint - 40, this.height - 40, 'GasMask');
+        this.GarbageBin_button = this.add.sprite(midpoint + 40, this.height - 40, 'GarbageBin');
+
 
         // 
         this.genPaths();
