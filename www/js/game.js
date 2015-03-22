@@ -65,7 +65,7 @@ window.Game.PhaserGame.prototype = {
 		this.load.image('SpeedLimit', 'assets/sign/sign.png');
 
         // Add panel image
-        this.load.image('Panel', 'assets/back/chest.png');
+        this.load.image('Panel', 'assets/back/chest.gpng');
         
 		// Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
@@ -119,9 +119,9 @@ window.Game.PhaserGame.prototype = {
         // Setup menu bar
         // ----------
         var midpoint = game.width / 2;
-        this.panel = this.add.sprite(midpoint - 40, this.height - 40, 'Panel');
-        this.GasMask_button = this.add.sprite(midpoint - 40, this.height - 40, 'GasMask');
-        this.GarbageBin_button = this.add.sprite(midpoint + 40, this.height - 40, 'GarbageBin');
+        this.panel = this.add.sprite(midpoint - 40, 40, 'Panel');
+        this.GasMask_button = this.add.sprite(midpoint - 40, 40, 'GasMask');
+        this.GarbageBin_button = this.add.sprite(midpoint + 40, 0, 'GarbageBin');
 
 
         // 
