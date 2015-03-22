@@ -119,7 +119,7 @@ window.Game.PhaserGame.prototype = {
         // Setup menu bar
         // ----------
         var midpoint = game.width / 2;
-        var midpoint_height = game.height - 150;
+        var midpoint_height = game.height - 100;
         this.panel = this.add.sprite(midpoint - 100, midpoint_height, 'Panel');
         this.GasMask_button = this.add.sprite((midpoint - 95), (midpoint_height+10), 'GasMask');
         this.GasMask_button.scale.set(4.0);
@@ -165,7 +165,7 @@ window.Game.PhaserGame.prototype = {
 
         // First check if we clicked on the panel or not
         var GasMask_dist = Math.sqrt(Math.pow(x - this.GasMask_button.x,2) + Math.pow(y - this.GasMask_button.y));
-        var GarbageBin_dist = Math.sqrt(Math.pow(x - this.GarbageBin_button.x,2) + Math.pow(y - this.GarbageBin_button.y));
+        var GarbageBin_dist = Math.sqrt(Math.pow(x - this.GarbageBin_button.x,2) + Math.pow(y - this.gGarbageBin_button.y));
         if (GasMask_dist < 35)
         {
             this.item_mode = 0;
@@ -174,40 +174,42 @@ window.Game.PhaserGame.prototype = {
         {
             this.item_mode = 1;
         }
-
-        // Calculate distances between the lanes and the click to determine which lane was clicked
-        var minDistance = Number.MAX_VALUE;
-        var minIndex = 0;
-        for (var i = 0; i < this.num_lanes; i++) 
+        else
         {
-            var distance = Math.abs(y - this.lane_y_points[i]);
-            if (distance < minDistance)
+            // Calculate distances between the lanes and the click to determine which lane was clicked
+            var minDistance = Number.MAX_VALUE;
+            var minIndex = 0;
+            for (var i = 0; i < this.num_lanes; i++) 
             {
-                minDistance = distance;
-                minIndex = i;
+                var distance = Math.abs(y - this.lane_y_points[i]);
+                if (distance < minDistance)
+                {
+                    minDistance = distance;
+                    minIndex = i;
+                }
             }
+
+
+            // Set it's properties based on current item mode
+            switch (this.item_mode)
+            {
+                case 0:
+                    this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask'));
+    				this.items[ this.items.length - 1 ].perm = 0;
+                    break;
+                case 1:
+                    this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GarbageBin'));
+                    this.items[ this.items.length - 1 ].perm = 1;
+                    this.items[ this.items.length - 1 ].lifespan = 10*1000;
+                    break;
+            }
+
+    		this.items[ this.items.length - 1 ].scale.set(4.0);
+    		this.items[ this.items.length - 1 ].anchor.set(0.5);
+    		this.items[ this.items.length - 1 ].dmg = 10;
+
+            console.log(x + " " + y + " at lane y " + this.lane_y_points[minIndex]);
         }
-
-
-        // Set it's properties based on current item mode
-        switch (this.item_mode)
-        {
-            case 0:
-                this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask'));
-				this.items[ this.items.length - 1 ].perm = 0;
-                break;
-            case 1:
-                this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GarbageBin'));
-                this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].lifespan = 10*1000;
-                break;
-        }
-
-		this.items[ this.items.length - 1 ].scale.set(4.0);
-		this.items[ this.items.length - 1 ].anchor.set(0.5);
-		this.items[ this.items.length - 1 ].dmg = 10;
-
-        console.log(x + " " + y + " at lane y " + this.lane_y_points[minIndex]);
     },
 
     genPaths: function () {
