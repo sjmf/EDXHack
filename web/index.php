@@ -19,17 +19,8 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __
 
 $app->get('/', function() use($app){
 
+  getNoisePollution(99, 99);
   return $app['twig']->render('geo.twig', array());
-});
-
-$app->post('/geo', function(Request $request){
-    $data = json_decode($request->getContent());
-
-    $lat = $data->lat;
-    $long = $data->long;
-
-	$closest = getLocationFromPoint($lat,$long);
-	return $closest;
 });
 
 $app->post('/gameParams', function(Request $request){
@@ -40,7 +31,7 @@ $app->post('/gameParams', function(Request $request){
 	$closest = getLocationFromPoint($lat,$long);
 
 	$data = fetch_defra($closest);
-	var_dump($data);
+	// var_dump($data);
 
 	return $closest;
 });
@@ -88,21 +79,29 @@ function getNoisePollution($lat, $long)
     for($i = 0; $i < count($item); $i++)
     {
       $location[$headers[$i]] = $item[$i];
+
     }
     array_push($locations, $location);
   }
 
-  // Presume you have the location index mapped here
-  switch(getLocationFromPoint($lat, $long))
+  // Print to the screen
+  for($i = 0; $i < count($locations); $i++)
   {
+    print $i.' '.$locations[$i]['Location/Agglomeration'].'<br />';
 
   }
-  
+
+  // // Presume you have the location index mapped here
+  // switch(getLocationFromPoint($lat, $long))
+  // {
+  //   case: ''
+  // }
+
 
   // Get the Noise pollution
   $pollution = $locations[$key]['Road_Pop_Lden>=65dB'];
 
-  return json_encode(array('noisePollution'=>$pollution));
+  // return json_encode(array('noisePollution'=>$pollution));
 }
 
 
