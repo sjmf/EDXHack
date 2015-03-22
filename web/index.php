@@ -20,7 +20,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __
 
 $app->get('/', function() use($app){
 
-  getNoisePollution(99, 99);
+
   return $app['twig']->render('geo.twig', array());
 });
 
@@ -30,13 +30,19 @@ $app->post('/gameParams', function(Request $request){
     $lat = $data->lat;
     $long = $data->long;
 
-	$closest = getLocationFromPoint($lat,$long);
+    $noise = getNoisePollution($lat, $long);
+    $air = getAirPollution($lat, $long);
 
-	$data = fetch_defra($closest);
-	var_dump($places);
 
-	return $closest;
+
+	// $data = fetch_defra($closest);
+	// var_dump($places);
+
+	return json_encode(array('air'=>$air, 'noise'=>$noise));
 });
+
+//
+
 
 // =================================================================
 //  Get the Air Pollution Levels based off of Lat / Long Data
@@ -54,7 +60,7 @@ function getAirPollution($lat, $long)
     $total = $total + $item['measurement'];
   }
 
-  return json_encode(array('airPollution'=>$total));
+  return $total;
 }
 
 // =================================================================
@@ -86,12 +92,12 @@ function getNoisePollution($lat, $long)
     array_push($locations, $location);
   }
 
-  // Print to the screen
-  for($i = 0; $i < count($locations); $i++)
-  {
-    print $i.' '.$locations[$i]['Location/Agglomeration'].'<br />';
-
-  }
+  // // Print to the screen
+  // for($i = 0; $i < count($locations); $i++)
+  // {
+  //   print $i.' '.$locations[$i]['Location/Agglomeration'].'<br />';
+  //
+  // }
 
   // turn lat long into a place name
   $defraCode = getLocationFromPoint($lat, $long);
@@ -110,7 +116,6 @@ function getNoisePollution($lat, $long)
   {
     // Call Google for the location
     $coord = get_loc($loc['Location/Agglomeration'].', England')['results'][0]['geometry']['location'];
-
     // Create a haversine to do the calculation
     $locPOI = new POI($coord['lat'], $coord['lng']);
     $km = $placePOI->getDistanceInMetersTo($locPOI) / 1000;
