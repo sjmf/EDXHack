@@ -166,6 +166,7 @@ window.Game.PhaserGame.prototype = {
         // First check if we clicked on the panel or not
         var GasMask_dist = Math.sqrt(Math.pow(x - this.GasMask_button.x,2) + Math.pow(y - this.GasMask_button.y));
         var GarbageBin_dist = Math.sqrt(Math.pow(x - this.GarbageBin_button.x,2) + Math.pow(y - this.GarbageBin_button.y));
+        console.log(GasMask_dist + " gm dist and " + GarbageBin_dist);
         if (GasMask_dist < 35)
         {
             this.item_mode = 0;
