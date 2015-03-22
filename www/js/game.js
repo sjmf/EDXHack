@@ -31,7 +31,7 @@ window.Game.PhaserGame = function () {
     this.item_mode = 0;
 
     // Perfect city storage
-    this.perfect_cities = [];
+    this.cities = [];
 
     // Engine stuff
     this.previous_time = 0;
@@ -91,7 +91,7 @@ window.Game.PhaserGame.prototype = {
             console.log(this.lane_y_points[i]);
 
             // Setup path's perfect city
-            this.perfect_cities[i] = this.add.sprite(this.x_bounds[1], this.lane_y_points[i], cities[i]);
+            this.cities[i] = this.add.sprite(this.x_bounds[1], this.lane_y_points[i], cities[i]);
         }
 
         // ----------
@@ -120,14 +120,13 @@ window.Game.PhaserGame.prototype = {
         this.enemies[ this.enemies.length - 1 ].anchor.set(0.5);
         switch (type)
         {
-            case "GasMask":
+            case "NoisePollution":
                 this.enemies[ this.enemies.length - 1 ].health = 50;
-                break;
-            case "GarbageBag":
-                this.enemies[ this.enemies.length - 1 ].health = 50;
+                this.enemies[ this.enemies.length - 1 ].dmg = 1;
                 break;
             case "PollutionCloud":
                 this.enemies[ this.enemies.length - 1 ].health = 50;
+                this.enemies[ this.enemies.length - 1 ].dmg = 2;
                 break;
         }
     },
@@ -157,17 +156,17 @@ window.Game.PhaserGame.prototype = {
         {
             case 0:
                 this.items[ this.items.length - 1 ].perm = 0;
-                this.items[ this.items.length - 1 ].damage = 10;
+                this.items[ this.items.length - 1 ].dmg = 10;
                 this.items[ this.items.length - 1 ].timer = 0;
                 break;
             case 1:
                 this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].damage = 10;
+                this.items[ this.items.length - 1 ].dmg = 10;
                 this.items[ this.items.length - 1 ].timer = 60;
                 break;
             case 2:
                 this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].damage = 10;
+                this.items[ this.items.length - 1 ].dmg = 10;
                 this.items[ this.items.length - 1 ].timer = 120;
                 break;
         }
@@ -223,18 +222,26 @@ window.Game.PhaserGame.prototype = {
             // Collision detection with items
             for (var j = 0; j < this.items.length; j++)
             {
-                var distance = Math.sqrt(Math.pow(this.enemies[i].x - this.items[j].x,2) + Math.pow(this.enemies[i].y - this.items[j].y,2));
+                // Check for overlap
                 if (this.enemies[i].overlap(this.items[j]))
                 {
+                    // Account for permanent items and temporary items
                     if (this.items[j].perm == 0)
                     {
+                        // temporary items are destroyed on collision
                         this.items[j].destroy(true);
-                        this.enemies[i].damage(this.items[j].damage);
                     }
-                    else
-                    {
-                        this.enemies[i].damage(this.items[j].damage);
-                    }
+                    this.enemies[i].damage(this.items[j].dmg);
+                }
+            }
+
+            // Collision detection with cities
+            for (var j = 0; j < this.cities.length; j++)
+            {
+                // Check for overlap
+                if (this.enemies[i].overlap(this.cities[j]))
+                {
+                    this.cities[j].damage(this.enemies[i].dmg);
                 }
             }
         }
