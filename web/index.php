@@ -106,7 +106,7 @@ function getNoisePollution($lat, $long)
 // =================================================================
 function getLocationFromPoint($lat, $long)
 {
-	global $closest;
+	global $closest, $places;
 
     $xml = simplexml_load_string(
         file_get_contents('http://uk-air.defra.gov.uk/assets/rss/current_site_levels.xml'),
@@ -145,7 +145,7 @@ function getLocationFromPoint($lat, $long)
 
 		// Insert into array
 		$closest[$tag] = $km;
-
+		$places[$tag]  = $name;
 		// Echo
 		//echo $name ."\n";
 		//echo $tag ."\n";
