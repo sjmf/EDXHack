@@ -121,8 +121,8 @@ window.Game.PhaserGame.prototype = {
         var midpoint = game.width / 2;
         var midpoint_height = game.height - 150;
         this.panel = this.add.sprite(midpoint, midpoint_height, 'Panel');
-        this.GasMask_button = this.add.sprite(midpoint - 10, midpoint_height, 'GasMask');
-        this.GarbageBin_button = this.add.sprite(midpoint + 10, midpoint_height, 'GarbageBin');
+        this.GasMask_button = this.add.sprite((midpoint - 10), midpoint_height, 'GasMask');
+        this.GarbageBin_button = this.add.sprite((midpoint + 10), midpoint_height, 'GarbageBin');
 
 
         // 
