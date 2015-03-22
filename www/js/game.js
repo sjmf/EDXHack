@@ -183,7 +183,7 @@ window.Game.PhaserGame.prototype = {
                 this.enemies[i].x = this.x_bounds[0];
 
             // Collision detection
-            for (var j = 0; j < this.items.length; i++)
+            for (var j = 0; j < this.items.length; j++)
             {
                 var distance = Math.sqrt(Math.pow(this.enemies[i].x - this.items[j].x,2) + Math.pow(this.enemies[i].y - this.items[j].y,2));
                 if (distance < 25)
