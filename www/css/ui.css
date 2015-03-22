@@ -1,9 +1,10 @@
 #game {
     position: relative;
+    overflow: hidden;
 }
 
 .game-alert {
-    position: fixed;
+    position: absolute;
     top: -100px;
     left: 50%;
     width: 200px;
