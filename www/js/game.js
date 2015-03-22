@@ -2,7 +2,7 @@ window.Game = {};
 var G = window.Game;
 
 window.Game.size = {
-    width: window.innerWidth || document.body.clientWidth,
+    width: $('#game').width() || window.innerWidth || document.body.clientWidth,
     height: window.innerHeight || document.body.clientHeight
 }
 var size = window.Game.size;
