@@ -175,11 +175,11 @@ PhaserGame.prototype = {
             else
                 this.enemies[i].x = this.x_bounds[0];
 
-            if (!printed)
+            if (printed == 0)
             {
                 console.log(this.lane_y_points[i]);
                 if (i == this.enemies.length-1)
-                    printed = 1;g
+                    printed = 1;
             }
         }
 
