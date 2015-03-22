@@ -179,7 +179,7 @@ PhaserGame.prototype = {
             {
                 console.log(this.lane_y_points[i]);
                 if (i == this.enemies.length-1)
-                    printed = 1;
+                    printed = 1;g
             }
         }
 
