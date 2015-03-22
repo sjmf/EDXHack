@@ -3,7 +3,7 @@ window.Game.util = {};
 var util = window.Game.util;
 var $ = jQuery;
 
-util.acheive = function(msg, type) {
+util.achieve = function(msg, type) {
     var type = type || 'info';
     var $msg = jQuery('<div class="alert alert-'+type+' game-alert" role="alert"><p>'+msg+'</p></div>');
     jQuery('#game').append($msg);
@@ -11,12 +11,12 @@ util.acheive = function(msg, type) {
     setTimeout(function(){$msg.addClass('out');setTimeout(function(){$msg.remove()},2000)}, 3000);
 };
 
-setTimeout(function(){window.Game.util.acheive('Play!','success');},3000);
-setTimeout(function(){window.Game.util.acheive('Oh noes!','success');},5000);
+//setTimeout(function(){window.Game.util.achieve('Play!','success');},3000);
+//setTimeout(function(){window.Game.util.achieve('Oh noes!','success');},5000);
 
 
 
-setInterval(function(){
+/*setInterval(function(){
     // random things!
     
     var msgs = [
@@ -27,6 +27,6 @@ setInterval(function(){
     
     var r = Math.floor(Math.random()*msgs.length);
     
-    util.acheive(msgs[r].m, msgs[r].t);
+    util.achieve(msgs[r].m, msgs[r].t);
     
-}, 5000);
+}, 5000);*/

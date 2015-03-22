@@ -45,9 +45,7 @@ var PhaserGame = window.Game.PhaserGame;
 window.Game.PhaserGame.prototype = {
 
     init: function () {
-
         this.game.renderer.renderSession.roundPixels = true;
-
     },
 
     preload: function () {
@@ -68,7 +66,9 @@ window.Game.PhaserGame.prototype = {
 		// Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
         this.load.image('lond', 'assets/back/londonphoto.png');
-        cities = [ 'newc', 'lond' ];
+        this.load.image('live', 'assets/back/liverpool.jpg');
+        this.load.image('manc', 'assets/back/manchester.jpg');
+        cities = [ 'newc', 'lond', 'live', 'manc' ];
 
         // Load background image
         this.load.image('background', 'assets/back/grass.png');
@@ -97,7 +97,10 @@ window.Game.PhaserGame.prototype = {
             console.log(this.lane_y_points[i]);
 
             // Setup path's perfect city
-            this.cities[i] = this.add.sprite(this.x_bounds[1], this.lane_y_points[i], cities[i]);
+            this.cities[i] = this.add.sprite(this.x_bounds[1], this.lane_y_points[i]-35, cities[i]);
+            this.cities[i].death_message = 0;
+            this.cities[i].width = 100;
+            this.cities[i].height = 70;
         }
 
         // ----------
@@ -116,6 +119,7 @@ window.Game.PhaserGame.prototype = {
         // Setup input
         // ----------
         this.game.input.onDown.add(this.placeItems, this);
+        this.keyboard = this.game.input.keyboard;
 
         this.printed = 0;
     },
@@ -127,7 +131,7 @@ window.Game.PhaserGame.prototype = {
 		);
 		this.enemies[ this.enemies.length - 1 ].scale.set(4.0);
         this.enemies[ this.enemies.length - 1 ].anchor.set(0.5);
-        switch (type)
+		switch (type)
         {
             case "NoisePollution":
                 this.enemies[ this.enemies.length - 1 ].health = 50;
@@ -157,31 +161,24 @@ window.Game.PhaserGame.prototype = {
             }
         }
 
-        // Place the item
-        this.items.push(
-			this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask')
-		);
 
         // Set it's properties based on current item mode
         switch (this.item_mode)
         {
             case 0:
-                this.items[ this.items.length - 1 ].perm = 0;
-                this.items[ this.items.length - 1 ].dmg = 10;
-                this.items[ this.items.length - 1 ].timer = 0;
+                this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask'));
+				this.items[ this.items.length - 1 ].perm = 0;
                 break;
             case 1:
+                this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GarbageBin'));
                 this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].dmg = 10;
-                this.items[ this.items.length - 1 ].timer = 60;
-                break;
-            case 2:
-                this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].dmg = 10;
-                this.items[ this.items.length - 1 ].timer = 120;
+                this.items[ this.items.length - 1 ].lifespan = 10*1000;
                 break;
         }
 
+		this.items[ this.items.length - 1 ].scale.set(4.0);
+		this.items[ this.items.length - 1 ].anchor.set(0.5);
+		this.items[ this.items.length - 1 ].dmg = 10;
 
         console.log(x + " " + y + " at lane y " + this.lane_y_points[minIndex]);
     },
@@ -255,15 +252,40 @@ window.Game.PhaserGame.prototype = {
                     this.cities[j].health = this.cities[j].health - this.enemies[i].dmg;
                     if (this.cities[j].health <= 0)
                     {
-                        G.util.achieve('Your city has been destroyed','danger');
+                        this.cities[j].exists = false;
+                        this.cities[j].destroy(true);
+                        if (this.cities[j].death_message == 0)
+                        {
+                            G.util.achieve('Your city has been destroyed','danger');
+                            this.cities[j].death_message = 1;
+                        }
                     }
                     this.enemies[i].destroy(true);
                 }
             }
         }
 
+        // Poll the keyboard
+        this.pollKeyboard();
+
         // Store previous time
         this.previous_time = this.current_time;
+    },
+
+    pollKeyboard: function() {
+
+        if (this.keyboard.isDown(1))
+        {
+            console.log("one");
+        }
+        if (this.keyboard.isDown(2))
+        {
+            console.log("two");
+        }
+        if (this.keyboard.isDown(3))
+        {
+            console.log("three");
+        }
     }
 
 };
