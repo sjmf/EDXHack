@@ -117,7 +117,10 @@ window.Game.PhaserGame.prototype = {
 
     createEnemy: function(type, lane) {
 
-        this.enemies.push(this.add.sprite(this.x_bounds[0], this.lane_y_points[lane], type));
+        this.enemies.push(
+			this.add.sprite(this.x_bounds[0], this.lane_y_points[lane], type)
+		);
+		this.enemies[ this.enemies.length - 1 ].scale.set(4.0);
         this.enemies[ this.enemies.length - 1 ].anchor.set(0.5);
         switch (type)
         {
