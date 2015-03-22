@@ -24,14 +24,15 @@ $app->get('/', function() use($app){
 });
 
 $app->post('/gameParams', function(Request $request){
-    $data = json_decode($request->getContent());
+    global $places;
+	$data = json_decode($request->getContent());
     $lat = $data->lat;
     $long = $data->long;
 
 	$closest = getLocationFromPoint($lat,$long);
-
+	
 	$data = fetch_defra($closest);
-	// var_dump($data);
+	var_dump($places);
 
 	return $closest;
 });
@@ -152,7 +153,7 @@ function getLocationFromPoint($lat, $long)
 
 		// Insert into array
 		$closest[$tag] = $km;
-		$places[$tag]  = $name;
+		$places[$tag]  = (string) $name;
 		// Echo
 		//echo $name ."\n";
 		// echo $tag ."\n";
