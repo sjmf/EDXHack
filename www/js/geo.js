@@ -22,6 +22,11 @@ function sendToServer(position)
 	var data = {lat:lat, long:long};
 	data = JSON.stringify(data);
 
+	x.innerHTML="<h3>Game Loaded- click play!</h3>";
+	jQuery("#playbtn").show();
+	window.gameParams = {"air":199.41839,"noise":46100};
+	return;
+
 	jQuery.ajax({
 	  url:'/api/gameParams',
 	  method:'POST',
