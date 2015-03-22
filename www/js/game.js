@@ -99,7 +99,7 @@ window.Game.PhaserGame.prototype = {
         var midpoint = game.width /2 ;
         for (var i = 0; i < this.num_initial_enemies; i++)
         {
-            this.enemies[i] = this.add.sprite(this.x_bounds[0], this.lane_y_points[i], 'pollutionCloud');
+            this.enemies.push(this.add.sprite(this.x_bounds[0], this.lane_y_points[i], 'pollutionCloud'));
             this.enemies[i].anchor.set(0.5);
         }
 
@@ -182,7 +182,7 @@ window.Game.PhaserGame.prototype = {
             else
                 this.enemies[i].x = this.x_bounds[0];
 
-            // Collision detection
+            // Collision detection with items
             for (var j = 0; j < this.items.length; j++)
             {
                 var distance = Math.sqrt(Math.pow(this.enemies[i].x - this.items[j].x,2) + Math.pow(this.enemies[i].y - this.items[j].y,2));
