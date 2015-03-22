@@ -224,7 +224,7 @@ window.Game.PhaserGame.prototype = {
             for (var j = 0; j < this.items.length; j++)
             {
                 var distance = Math.sqrt(Math.pow(this.enemies[i].x - this.items[j].x,2) + Math.pow(this.enemies[i].y - this.items[j].y,2));
-                if (distance < 25)
+                if (this.enemies[i].overlap(this.items[j]))
                 {
                     if (this.items[j].perm == 0)
                     {
@@ -232,7 +232,9 @@ window.Game.PhaserGame.prototype = {
                         console.log(this.enemies[i].health);
                         if (this.enemies[i].health <= 0)
                         {
+                            this.enemies[i].kill()
                             this.enemies = this.enemies.splice(i, 1);
+                            this.items = this.items.splice(j, 1);
                         }
                     }
                 }
