@@ -169,13 +169,13 @@ window.Game.PhaserGame.prototype = {
             case 1:
                 this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GarbageBin'));
                 this.items[ this.items.length - 1 ].perm = 1;
+                this.items[ this.items.length - 1 ].lifespan = 10*1000;
                 break;
         }
 
 		this.items[ this.items.length - 1 ].scale.set(4.0);
 		this.items[ this.items.length - 1 ].anchor.set(0.5);
 		this.items[ this.items.length - 1 ].dmg = 10;
-		this.items[ this.items.length - 1 ].timer = 0;
 
         console.log(x + " " + y + " at lane y " + this.lane_y_points[minIndex]);
     },
