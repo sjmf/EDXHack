@@ -1,11 +1,13 @@
-var size = {
+window.Game = {};
+
+window.Game.size = {
     width: window.innerWidth || document.body.clientWidth,
     height: window.innerHeight || document.body.clientHeight
 }    
 
-var game = new Phaser.Game(size.width, size.height, Phaser.AUTO, 'game');
+window.Game.game = new Phaser.Game(size.width, size.height, Phaser.AUTO, 'game');
 
-var PhaserGame = function () {
+window.Game.PhaserGame = function () {
 
     // just adding comment to test
     this.bmd = null;
@@ -35,7 +37,7 @@ var PhaserGame = function () {
     this.printed = 0;
 };
 
-PhaserGame.prototype = {
+window.Game.PhaserGame.prototype = {
 
     init: function () {
 
@@ -184,4 +186,4 @@ PhaserGame.prototype = {
 
 };
 
-game.state.add('Game', PhaserGame, true);
+window.Game.game.state.add('Game', PhaserGame, true);
