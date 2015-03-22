@@ -56,3 +56,5 @@ target/
 # Other
 .DS_Store
 *.swp
+
+vendor
