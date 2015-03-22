@@ -4,6 +4,7 @@ require_once __DIR__.'/havercine.php';
 
 require_once __DIR__.'/../vendor/autoload.php';
 require __DIR__.'/../parse_defra.php';
+require __DIR__.'/../get_loc.php';
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -19,7 +20,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __
 
 $app->get('/api/', function() use ($DEFRA_TOON){
 
-  getNoisePollution(99, 99);
+
   return $app['twig']->render('geo.twig', array());
 });
 
@@ -29,13 +30,19 @@ $app->post('/gameParams', function(Request $request){
     $lat = $data->lat;
     $long = $data->long;
 
-	$closest = getLocationFromPoint($lat,$long);
-	
-	$data = fetch_defra($closest);
-	var_dump($places);
+    $noise = getNoisePollution($lat, $long);
+    $air = getAirPollution($lat, $long);
 
-	return $closest;
+
+
+	// $data = fetch_defra($closest);
+	// var_dump($places);
+
+	return json_encode(array('air'=>$air, 'noise'=>$noise));
 });
+
+//
+
 
 // =================================================================
 //  Get the Air Pollution Levels based off of Lat / Long Data
@@ -53,7 +60,7 @@ function getAirPollution($lat, $long)
     $total = $total + $item['measurement'];
   }
 
-  return json_encode(array('airPollution'=>$total));
+  return $total;
 }
 
 // =================================================================
@@ -61,7 +68,7 @@ function getAirPollution($lat, $long)
 // =================================================================
 function getNoisePollution($lat, $long)
 {
-  global $closest, $places;
+  global $closest, $places, $geoLoc;
   // Get the Noise pollution data from online and convert it to JSON
   // $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
   $data = array_map('str_getcsv', file('noise.csv'));
@@ -85,25 +92,46 @@ function getNoisePollution($lat, $long)
     array_push($locations, $location);
   }
 
-  // Print to the screen
-  for($i = 0; $i < count($locations); $i++)
+  // // Print to the screen
+  // for($i = 0; $i < count($locations); $i++)
+  // {
+  //   print $i.' '.$locations[$i]['Location/Agglomeration'].'<br />';
+  //
+  // }
+
+  // turn lat long into a place name
+  $defraCode = getLocationFromPoint($lat, $long);
+  $place = $places[$defraCode];
+  // Get the Geoloc for the place
+  $placeGeo = $geoLoc[$defraCode];
+
+  //  Get the aat/long of all my places from Seb's API
+  // Create a haversine POI object for $placeGeo
+  // Inside this lovely foreach, create a POI for the new lat long,
+  // Run the haversine distance formula with each distance, stored in a lowest distance variable.
+  $placePOI = new POI($placeGeo['lat'], $placeGeo['long']);
+  $lowest = PHP_INT_MAX;
+  $closestLoc;
+  foreach($locations as $loc)
   {
-    print $i.' '.$locations[$i]['Location/Agglomeration'].'<br />';
+    // Call Google for the location
+    $coord = get_loc($loc['Location/Agglomeration'].', England')['results'][0]['geometry']['location'];
+    // Create a haversine to do the calculation
+    $locPOI = new POI($coord['lat'], $coord['lng']);
+    $km = $placePOI->getDistanceInMetersTo($locPOI) / 1000;
+    if($km < $lowest)
+    {
+      $lowest = $km;
+      $closestLoc = $loc;
+    }
 
   }
-
-  getLocationFromPoint($lat, $long);
-  var_dump($places);
-
-  // // Presume you have the location index mapped here
-  // switch(getLocationFromPoint($lat, $long))
-  // {
-  //   case: ''
-  // }
+  // Now we have the closest location to where we are, just return the roadside noise pollution
+  return $closestLoc['Road_Pop_Lden>=65dB'];
 
 
   // Get the Noise pollution
-  $pollution = $locations[$key]['Road_Pop_Lden>=65dB'];
+  // $pollution = $locations[$key]['Road_Pop_Lden>=65dB'];
 
   // return json_encode(array('noisePollution'=>$pollution));
 }
@@ -114,7 +142,7 @@ function getNoisePollution($lat, $long)
 // =================================================================
 function getLocationFromPoint($lat, $long)
 {
-	global $closest, $places;
+	global $closest, $places, $geoLoc;
 
     $xml = simplexml_load_string(
         file_get_contents('http://uk-air.defra.gov.uk/assets/rss/current_site_levels.xml'),
@@ -154,6 +182,7 @@ function getLocationFromPoint($lat, $long)
 		// Insert into array
 		$closest[$tag] = $km;
 		$places[$tag]  = (string) $name;
+    $geoLoc[$tag] = array('lat'=>$lat_city, 'long'=>$long_city);
 		// Echo
 		//echo $name ."\n";
 		// echo $tag ."\n";
