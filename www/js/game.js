@@ -268,7 +268,7 @@ window.Game.PhaserGame.prototype = {
         }
 
         // Poll the keyboard
-        pollKeyboard();
+        this.pollKeyboard();
 
         // Store previous time
         this.previous_time = this.current_time;
