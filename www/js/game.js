@@ -59,8 +59,13 @@ window.Game.PhaserGame.prototype = {
 
         // Add enemy images
         this.load.image('PollutionCloud', 'assets/Pol/1.png');
+       	this.load.image('Noise', 'assets/noise/5.png');
+		
+		// Add defense images
+		this.load.image('GasMask', 'assets/gas/gas.png');
+		this.load.image('SpeedLimit', 'assets/sign/sign.png');
         
-        // Add city images
+		// Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
         this.load.image('lond', 'assets/back/londonphoto.png');
         cities = [ 'newc', 'lond' ];
@@ -153,7 +158,9 @@ window.Game.PhaserGame.prototype = {
         }
 
         // Place the item
-        this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'PollutionCloud'));
+        this.items.push(
+			this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask')
+		);
 
         // Set it's properties based on current item mode
         switch (this.item_mode)
