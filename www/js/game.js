@@ -73,6 +73,7 @@ PhaserGame.prototype = {
         // -----------
         this.num_lanes = 4;
         var path_interval = game.height / (this.num_lanes + 1);
+        console.log(path_interval);
 
         // Generate enemy y values
         for (var i = 0; i < this.num_lanes; i++)
