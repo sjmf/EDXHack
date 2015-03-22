@@ -34,6 +34,10 @@ window.Game.PhaserGame = function () {
     // Perfect city storage
     this.cities = [];
 
+    // Menu stuff
+    this.GasMask_button = null;
+    this.GarbageBin_button = null;
+
     // Engine stuff
     this.previous_time = 0;
     this.current_time = 0;
