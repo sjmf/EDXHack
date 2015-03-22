@@ -2,7 +2,7 @@
 
 function fetch_defra($site_id = 'ACTH', $view = 'last_hour') {
 
-    $site_id = preg_replace('![^A-Z]!','',$site_id);
+    $site_id = preg_replace('![^A-Z0-9]!','',$site_id);
     $view = preg_replace('![^a-z_]!','',$view);
     $url = "http://uk-air.defra.gov.uk/data/site-data?f_site_id=${site_id}&view=${view}";
 

@@ -1,0 +1,54 @@
+<html>
+  <head>
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+	<script src="js/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <pre id='demo'>Loading Data from Geolocation...</pre>
+
+    <script type="text/javascript">
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(sendToServer);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML = "Latitude: " + position.coords.latitude +
+        "<br>Longitude: " + position.coords.longitude;
+      }
+
+      function sendToServer(position)
+      {
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
+
+        var data = {lat:lat, long:long};
+        data = JSON.stringify(data);
+
+        $.ajax({
+          url:'/gameParams',
+          method:'POST',
+          type: 'application/JSON',
+          data: data,
+          success: function(response){
+            $("#demo").text(response);
+          },
+          error: function(response) {
+          	alert("Error loading data");
+		  }
+        });
+      }
+      
+	  getLocation();
+	  // Test
+	  //sendToServer({"coords":{"latitude":50.55232, "longditude":55.12345}});
+    </script>
+  
+
+</html>
