@@ -101,6 +101,7 @@ window.Game.PhaserGame.prototype = {
             // Setup path's perfect city
             this.cities[i] = this.add.sprite(this.x_bounds[1], this.lane_y_points[i], cities[i]);
             this.cities[i].death_message = 0;
+            this.cities[i].width.set(100);
         }
 
         // ----------
