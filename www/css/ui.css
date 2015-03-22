@@ -1,0 +1,20 @@
+#game {
+    position: relative;
+}
+
+.game-alert {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
+    -webkit-transition: top 1s ease, opacity 2s linear;
+    transition: top 1s ease, opacity 2s linear;
+    opacity: 1;
+}
+.game-alert.in {
+    top: 1em;
+}
+.game-alert.out {
+    opacity: 0;
+}
