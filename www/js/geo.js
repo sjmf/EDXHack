@@ -1,10 +1,11 @@
-//var x = document.getElementById("geoStatus");
-
+var x = document.getElementById("geodata");
 function getLocation() {
+
 	if (navigator.geolocation) {
+		jQuery("#geodata").html('<h3 style="display:inline">Loading Geographic Data&nbsp;<img src="img/ajax-loader.gif" style="display:inline"/>	</h3>');
 	  navigator.geolocation.getCurrentPosition(sendToServer);
 	} else {
-	  alert( "Geolocation is not supported by this browser.");
+	  jQuery("#geodata").text( "Geolocation is not supported by this browser.");
 	}
 }
 
@@ -29,6 +30,8 @@ function sendToServer(position)
 	  success: function(response){
 		console.log(response);
 		window.gameParams=response;
+		x.innerHTML="<h3>Game Loaded- click play!</h3>";
+		jQuery("#playbtn").show();
 	  },
 	  error: function(response) {
 		alert("Error loading data");

@@ -305,4 +305,9 @@ window.Game.PhaserGame.prototype = {
 
 };
 
-game.state.add('Game', window.Game.PhaserGame, true);
+function startGame() {
+	if(! window.gameParams)
+		alert("Not ready yet!");
+	game.state.add('Game', window.Game.PhaserGame, true);
+}
+
