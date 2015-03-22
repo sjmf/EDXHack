@@ -8,7 +8,6 @@ require __DIR__.'/../get_loc.php';
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-
 $app = new Silex\Application();
 $app['debug'] = true;
 
@@ -18,10 +17,8 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array('twig.path' => __
 
 // Function and page definitions
 
-$app->get('/api/', function() use ($DEFRA_TOON){
-
-
-  return $app['twig']->render('geo.twig', array());
+$app->get('/', function() use ($app){
+  return $app['twig']->render('index.twig', array());
 });
 
 $app->post('/api/gameParams', function(Request $request){
