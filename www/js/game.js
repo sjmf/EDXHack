@@ -31,6 +31,8 @@ var PhaserGame = function () {
     // Engine stuff
     this.previous_time = 0;
     this.current_time = 0;
+
+    this.printed = 0;
 };
 
 PhaserGame.prototype = {
@@ -103,6 +105,8 @@ PhaserGame.prototype = {
         // Setup input
         // ----------
         this.game.input.onDown.add(this.placeItems, this);
+
+        this.printed = 0;
     },
 
     placeItems: function() {
@@ -163,24 +167,23 @@ PhaserGame.prototype = {
         this.current_time = this.game.time.time;
         var dt = this.current_time - this.previous_time;
 
-        // Update enemy paths
+        // Update enemy movement
         for (var i = 0; i < this.enemies.length; i++)
         {
             if (this.enemies[i].x > this.x_bounds[1])
                 this.enemies[i].x = this.enemies[i].x - (this.enemy_speed * dt);
             else
                 this.enemies[i].x = this.x_bounds[0];
+
+            if (!printed)
+            {
+                console.log(this.lane_y_points[i]);
+                if (i == this.enemies.length-1)
+                    printed = 1;
+            }
         }
 
         // 
-
-
-        this.pi++;
-
-        if (this.pi >= this.enemy_paths[0].length)
-        {
-            this.pi = 0;
-        }
 
         // Store previous time
         this.previous_time = this.current_time;
