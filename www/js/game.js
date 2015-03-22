@@ -98,6 +98,7 @@ window.Game.PhaserGame.prototype = {
 
             // Setup path's perfect city
             this.cities[i] = this.add.sprite(this.x_bounds[1], this.lane_y_points[i], cities[i]);
+            this.cities[i].death_message = 0;
         }
 
         // ----------
@@ -250,7 +251,11 @@ window.Game.PhaserGame.prototype = {
                     {
                         this.cities[j].exists = false;
                         this.cities[j].destroy(true);
-                        G.util.achieve('Your city has been destroyed','danger');
+                        if (this.cities[j].death_message == 0)
+                        {
+                            G.util.achieve('Your city has been destroyed','danger');
+                            this.cities[j].death_message = 1;
+                        }
                     }
                     this.enemies[i].destroy(true);
                 }
