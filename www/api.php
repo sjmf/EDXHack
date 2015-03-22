@@ -24,7 +24,7 @@ $app->get('/api/', function() use ($DEFRA_TOON){
   return $app['twig']->render('geo.twig', array());
 });
 
-$app->post('/gameParams', function(Request $request){
+$app->post('/api/gameParams', function(Request $request){
     global $places;
 	$data = json_decode($request->getContent());
     $lat = $data->lat;
