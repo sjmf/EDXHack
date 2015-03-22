@@ -158,36 +158,22 @@ window.Game.PhaserGame.prototype = {
             }
         }
 
-        // Place the item
-<<<<<<< HEAD
-=======
-        this.items.push(
-			this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask')
-		);
-
-        this.items[ this.items.length - 1 ].scale.set(4.0);
->>>>>>> 378d3a11f130c392f7b51f97f73694854b799626
-
         // Set it's properties based on current item mode
         switch (this.item_mode)
         {
             case 0:
                 this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GasMask'));
+                this.items[ this.items.length - 1 ].scale.set(4.0);
                 this.items[ this.items.length - 1 ].perm = 0;
                 this.items[ this.items.length - 1 ].dmg = 10;
                 this.items[ this.items.length - 1 ].timer = 0;
                 break;
             case 1:
                 this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GarbageBin'));
+                this.items[ this.items.length - 1 ].scale.set(4.0);
                 this.items[ this.items.length - 1 ].perm = 1;
                 this.items[ this.items.length - 1 ].dmg = 10;
                 this.items[ this.items.length - 1 ].timer = 60;
-                break;
-            case 2:
-                this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'OtherThing'));
-                this.items[ this.items.length - 1 ].perm = 1;
-                this.items[ this.items.length - 1 ].dmg = 10;
-                this.items[ this.items.length - 1 ].timer = 120;
                 break;
         }
 
