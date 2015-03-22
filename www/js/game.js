@@ -65,7 +65,7 @@ window.Game.PhaserGame.prototype = {
 		this.load.image('SpeedLimit', 'assets/sign/sign.png');
 
         // Add panel image
-        this.load.image('Panel', 'assets/back/chest.gpng');
+        this.load.image('Panel', 'assets/back/chest.png');
         
 		// Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
