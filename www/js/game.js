@@ -224,7 +224,7 @@ window.Game.PhaserGame.prototype = {
             for (var j = 0; j < this.items.length; j++)
             {
                 var distance = Math.sqrt(Math.pow(this.enemies[i].x - this.items[j].x,2) + Math.pow(this.enemies[i].y - this.items[j].y,2));
-                if (this.enemies[i].overlap(this.items[j]git ad))
+                if (this.enemies[i].overlap(this.items[j]))
                 {
                     if (this.items[j].perm == 0)
                     {
