@@ -36,7 +36,7 @@ window.Game.PhaserGame = function () {
 
     // Menu stuff
     this.GasMask_button = null;
-    this.GarbageBin_button = null;
+    this.SpeedLimit_button = null;
 
     // Engine stuff
     this.previous_time = 0;
@@ -65,7 +65,7 @@ window.Game.PhaserGame.prototype = {
 		
 		// Add defense images
 		this.load.image('GasMask', 'assets/gas/gas.png');
-        this.load.image('GarbageBin', 'assets/bag/bag1.png');
+        //this.load.image('GarbageBag', 'assets/bag/bag1.png');
 		this.load.image('SpeedLimit', 'assets/sign/sign.png');
 
         // Add panel image
@@ -127,8 +127,8 @@ window.Game.PhaserGame.prototype = {
         this.panel = this.add.sprite(midpoint - 100, midpoint_height, 'Panel');
         this.GasMask_button = this.add.sprite((midpoint - 95), (midpoint_height+10), 'GasMask');
         this.GasMask_button.scale.set(4.0);
-        this.GarbageBin_button = this.add.sprite((midpoint + 15), (midpoint_height+10), 'GarbageBin');
-        this.GarbageBin_button.scale.set(4.0);
+        this.SpeedLimit_button = this.add.sprite((midpoint + 15), (midpoint_height+10), 'SpeedLimit');
+        this.SpeedLimit_button.scale.set(4.0);
 
 
         // 
@@ -169,13 +169,13 @@ window.Game.PhaserGame.prototype = {
 
         // First check if we clicked on the panel or not
         var GasMask_dist = Math.sqrt(Math.pow(x - this.GasMask_button.x,2) + Math.pow(y - this.GasMask_button.y));
-        var GarbageBin_dist = Math.sqrt(Math.pow(x - this.GarbageBin_button.x,2) + Math.pow(y - this.GarbageBin_button.y));
-        console.log(GasMask_dist + " gm dist and " + GarbageBin_dist);
+        var SpeedLimit_dist = Math.sqrt(Math.pow(x - this.SpeedLimit_button.x,2) + Math.pow(y - this.SpeedLimit_button.y));
+        console.log(GasMask_dist + " gm dist and " + SpeedLimit_dist);
         if (GasMask_dist < 35)
         {
             this.item_mode = 0;
         }
-        else if (GarbageBin_dist < 35)
+        else if (SpeedLimit_dist < 35)
         {
             this.item_mode = 1;
         }
@@ -203,7 +203,7 @@ window.Game.PhaserGame.prototype = {
     				this.items[ this.items.length - 1 ].perm = 0;
                     break;
                 case 1:
-                    this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'GarbageBin'));
+                    this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'SpeedLimit'));
                     this.items[ this.items.length - 1 ].perm = 1;
                     this.items[ this.items.length - 1 ].lifespan = 10*1000;
                     break;
