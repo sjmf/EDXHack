@@ -320,6 +320,7 @@ window.Game.PhaserGame.prototype = {
 function startGame() {
 	if(! window.gameParams)
 		alert("Not ready yet!");
+	jQuery("#game").show();
 	game.state.add('Game', window.Game.PhaserGame, true);
 }
 
