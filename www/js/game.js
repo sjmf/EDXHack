@@ -186,4 +186,4 @@ window.Game.PhaserGame.prototype = {
 
 };
 
-window.Game.game.state.add('Game', PhaserGame, true);
+window.Game.game.state.add('Game', window.Game.PhaserGame, true);
