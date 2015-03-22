@@ -60,7 +60,7 @@ function getAirPollution($lat, $long)
 // =================================================================
 function getNoisePollution($lat, $long)
 {
-  global $closest;
+  global $closest, $places;
   // Get the Noise pollution data from online and convert it to JSON
   // $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
   $data = array_map('str_getcsv', file('noise.csv'));
@@ -90,6 +90,9 @@ function getNoisePollution($lat, $long)
     print $i.' '.$locations[$i]['Location/Agglomeration'].'<br />';
 
   }
+
+  getLocationFromPoint($lat, $long);
+  var_dump($places);
 
   // // Presume you have the location index mapped here
   // switch(getLocationFromPoint($lat, $long))
@@ -152,7 +155,7 @@ function getLocationFromPoint($lat, $long)
 		$places[$tag]  = $name;
 		// Echo
 		//echo $name ."\n";
-		echo $tag ."\n";
+		// echo $tag ."\n";
 		//echo implode(' ',$n) .' '. implode(' ',$w) ."\n";
 		//echo $lat .' '. $long ."\n";
 		//echo $km ."\n";
