@@ -38,7 +38,7 @@ $app->post('/gameParams', function(Request $request){
     $long = $data->long;
 
 	$closest = getLocationFromPoint($lat,$long);
-	
+
 	$data = fetch_defra($closest);
 	var_dump($data);
 
@@ -69,7 +69,7 @@ function getAirPollution($lat, $long)
 // =================================================================
 function getNoisePollution($lat, $long)
 {
-
+  global $closest;
   // Get the Noise pollution data from online and convert it to JSON
   // $data = array_map('str_getcsv', file('http://data.defra.gov.uk/env/strategic_noise_mapping/r2_strategic_noise_mapping.csv'));
   $data = array_map('str_getcsv', file('noise.csv'));
@@ -93,6 +93,10 @@ function getNoisePollution($lat, $long)
   }
 
   // Presume you have the location index mapped here
+  switch(getLocationFromPoint($lat, $long))
+  {
+
+  }
   
 
   // Get the Noise pollution
@@ -100,6 +104,7 @@ function getNoisePollution($lat, $long)
 
   return json_encode(array('noisePollution'=>$pollution));
 }
+
 
 // =================================================================
 // Get the nearest geolocated DEFRA data
@@ -148,7 +153,7 @@ function getLocationFromPoint($lat, $long)
 
 		// Echo
 		//echo $name ."\n";
-		//echo $tag ."\n";
+		echo $tag ."\n";
 		//echo implode(' ',$n) .' '. implode(' ',$w) ."\n";
 		//echo $lat .' '. $long ."\n";
 		//echo $km ."\n";
@@ -163,4 +168,3 @@ function getLocationFromPoint($lat, $long)
 }
 
 $app->run();
-
