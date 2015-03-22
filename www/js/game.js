@@ -250,7 +250,16 @@ window.Game.PhaserGame.prototype = {
         // Get current time and calculate delta
         this.current_time = this.game.time.time;
         var dt = this.current_time - this.previous_time;
-
+		
+		// random enemy gen
+		var rand = Math.floor(Math.random()*1000);
+		var rate = Math.floor(window.gameParams.air /2 ) ;
+		if(rand%rate == 0){
+			this.createEnemy(
+				"PollutionCloud", //(rand%2 == 0) ? "NoisePollution": "PollutionCloud",
+				rand%4
+			);
+		}
         // -------------
         // Update enemy movement
         // -------------

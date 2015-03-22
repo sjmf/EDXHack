@@ -29,7 +29,7 @@ function sendToServer(position)
 	  data: data,
 	  success: function(response){
 		console.log(response);
-		window.gameParams=response;
+		window.gameParams=JSON.parse(response);
 		x.innerHTML="<h3>Game Loaded- click play!</h3>";
 		jQuery("#playbtn").show();
 	  },
