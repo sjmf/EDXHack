@@ -128,6 +128,7 @@ PhaserGame.prototype = {
 
         // Place the item
         this.items.push(this.add.sprite(x, this.lane_y_points[minIndex], 'pollutionCloud'));
+        console.log(this.lane_y_points[minIndex] + " test");
 
 
         console.log(x + " " + y);
@@ -174,14 +175,6 @@ PhaserGame.prototype = {
                 this.enemies[i].x = this.enemies[i].x - (this.enemy_speed * dt);
             else
                 this.enemies[i].x = this.x_bounds[0];
-
-            if (this.printed == 0)
-            {
-                console.log(this.lane_y_points[i]);
-                if (i == this.enemies.length-1)
-                    this.printed = 1;
-            }
-            else console.log(this.printed);
         }
 
         // 
