@@ -34,7 +34,6 @@ $app->post('/geo', function(Request $request){
 
 $app->post('/gameParams', function(Request $request){
     $data = json_decode($request->getContent());
-
     $lat = $data->lat;
     $long = $data->long;
 
@@ -53,7 +52,6 @@ function getAirPollution($lat, $long)
 {
   // Use Lat and Long to determine the location
   $location = getLocationFromPoint($lat, $long);
-
   $data = fetch_defra($location, 'last_hour');
 
   $total = 0;
@@ -64,8 +62,8 @@ function getAirPollution($lat, $long)
   }
 
   return json_encode(array('airPollution'=>$total));
-
 }
+
 // =================================================================
 //  Get the Noise Pollution based off of lat long data
 // =================================================================
@@ -159,11 +157,10 @@ function getLocationFromPoint($lat, $long)
 	asort($closest);
 
 	$keys = array_keys($closest);
-	var_dump($closest[$keys[0]]);
+	//var_dump($closest[$keys[0]]);
 
 	return $keys[0];
 }
 
 $app->run();
 
-?>

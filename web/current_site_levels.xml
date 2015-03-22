@@ -1,0 +1,861 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>UK Air Pollution - Current levels</title>
+    <link>http://uk-air.defra.gov.uk/</link>
+    <language>en-gb</language>
+    <webMaster>info@uk-air.aeat.com</webMaster>
+    <lastBuildDate>Sat, 21 Mar 2015 20:35:10 +0000</lastBuildDate>
+    <image>
+      <url>http://uk-air.defra.gov.uk/images/resources/defra-logo.png</url>
+      <title>UK Air Pollution - Current levels</title>
+      <link>http://www.defra.gov.uk/</link>
+    </image>
+    <item>
+         <title>Auchencorth Moss</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ACTH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;47&acute;31.78&quot;N    3&deg;14&acute;34.44&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Bush Estate</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BUSH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;51&acute;44.21&quot;N    3&deg;12&acute;20.82&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Dumbarton Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=DUMB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;56&acute;35.51&quot;N    4&deg;33&acute;35.03&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Grangemouth</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GRAN&amp;view=last_hour</link>
+         <description><![CDATA[Location: 56&deg;00&acute;37.15&quot;N    3&deg;42&acute;15.84&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Grangemouth Moray</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GRA2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 56&deg;00&acute;47.31&quot;N    3&deg;42&acute;39.00&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Edinburgh St Leonards</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ED3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;56&acute;44.12&quot;N    3&deg;10&acute;55.87&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Glasgow Great Western Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GGWR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;52&acute;19.34&quot;N    4&deg;16&acute;15.37&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Glasgow High Street</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GHSR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;51&acute;39.37&quot;N    4&deg;14&acute;17.57&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Glasgow Kerbside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GLA4&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;51&acute;33.01&quot;N    4&deg;15&acute;32.00&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Glasgow Townhead</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GLKP&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;51&acute;56.82&quot;N    4&deg;14&acute;37.07&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Bottesford</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BOT&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;55&acute;49.01&quot;N    0&deg;48&acute;53.00&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Chesterfield Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CHS7&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;13&acute;54.20&quot;N    1&deg;27&acute;25.00&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Ladybower</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;24&acute;12.13&quot;N    1&deg;45&acute;7.22&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Lincoln Canwick Rd.</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LIN3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;13&acute;16.94&quot;N    0&deg;32&acute;3.08&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Market Harborough</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=MKTH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;33&acute;16.00&quot;N    0&deg;46&acute;20.00&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Northampton Kingsthorpe</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=NTN3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;16&acute;18.79&quot;N    0&deg;52&acute;47.63&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Leicester University</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LECU&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;37&acute;11.36&quot;N    1&deg;07&acute;38.32&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Nottingham Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=NOTT&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;57&acute;17.03&quot;N    1&deg;08&acute;47.21&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Cambridge Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CAM&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;12&acute;8.53&quot;N    0&deg;07&acute;28.04&quot;E <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Norwich Lakenfields</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=NO12&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;36&acute;51.09&quot;N    1&deg;18&acute;7.11&quot;E <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Sandy Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SDY&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;07&acute;56.70&quot;N    0&deg;18&acute;1.10&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Sibton</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SIB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;17&acute;39.84&quot;N    1&deg;27&acute;48.59&quot;E <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Southend-on-Sea</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SEND&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;32&acute;39.14&quot;N    0&deg;40&acute;42.27&quot;E <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>St Osyth</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=OSY&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;46&acute;40.73&quot;N    1&deg;02&acute;56.51&quot;E <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Stanford-le-Hope Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HOPE&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;31&acute;5.40&quot;N    0&deg;26&acute;22.37&quot;E <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Thurrock</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=THUR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;28&acute;37.45&quot;N    0&deg;19&acute;4.69&quot;E <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Weybourne</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=WEYB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;57&acute;1.76&quot;N    1&deg;07&acute;19.26&quot;E <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Wicken Fen</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=WFEN&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;17&acute;54.60&quot;N    0&deg;17&acute;27.30&quot;E <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Camden Kerbside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CA1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;32&acute;39.16&quot;N    0&deg;10&acute;30.97&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Ealing Horn Lane</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=EA8&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;31&acute;8.22&quot;N    0&deg;15&acute;56.22&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Haringey Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HG1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;35&acute;57.48&quot;N    0&deg;04&acute;5.58&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Bexley</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BEX&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;27&acute;57.71&quot;N    0&deg;11&acute;5.30&quot;E <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Bloomsbury</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CLL2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;31&acute;20.24&quot;N    0&deg;07&acute;33.20&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Eltham</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LON6&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;27&acute;9.29&quot;N    0&deg;04&acute;14.76&quot;E <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Haringey Priory Park South</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HG4&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;35&acute;2.86&quot;N    0&deg;07&acute;30.91&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Harlington</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HRL&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;29&acute;19.64&quot;N    0&deg;26&acute;29.81&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Harrow Stanmore</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HR3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;37&acute;2.40&quot;N    0&deg;17&acute;55.60&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Hillingdon</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HIL&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;29&acute;46.79&quot;N    0&deg;27&acute;39.10&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Marylebone Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=MY1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;31&acute;21.11&quot;N    0&deg;09&acute;16.60&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London N. Kensington</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=KC1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;31&acute;15.78&quot;N    0&deg;12&acute;48.57&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Teddington</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=TED&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;25&acute;15.56&quot;N    0&deg;20&acute;22.73&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Teddington Bushy Park</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=TED2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;25&acute;31.03&quot;N    0&deg;20&acute;44.18&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>London Westminster</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HORS&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;29&acute;40.81&quot;N    0&deg;07&acute;54.95&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Southwark A2 Old Kent Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SK5&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;28&acute;49.80&quot;N    0&deg;03&acute;34.38&quot;W <br />Current Pollution level is n/a ]]></description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Tower Hamlets Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=TH2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;31&acute;21.11&quot;N    0&deg;02&acute;31.76&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Fort William</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=FW&amp;view=last_hour</link>
+         <description><![CDATA[Location: 56&deg;49&acute;21.58&quot;N    5&deg;06&acute;3.97&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Inverness</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=INV2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 57&deg;28&acute;52.71&quot;N    4&deg;14&acute;29.22&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Lerwick</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LERW&amp;view=last_hour</link>
+         <description><![CDATA[Location: 60&deg;08&acute;21.19&quot;N    1&deg;11&acute;7.15&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Strathvaich</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SV&amp;view=last_hour</link>
+         <description><![CDATA[Location: 57&deg;44&acute;4.04&quot;N    4&deg;46&acute;35.70&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Billingham</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BIL&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;36&acute;19.33&quot;N    1&deg;16&acute;30.14&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Middlesbrough</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=MID&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;34&acute;9.47&quot;N    1&deg;13&acute;15.15&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Stockton-on-Tees A1305 Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SOTR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;33&acute;56.95&quot;N    1&deg;18&acute;57.24&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Stockton-on-Tees Eaglescliffe</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=EAGL&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;31&acute;0.00&quot;N    1&deg;21&acute;30.77&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Sunderland Silksworth</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SUN2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;53&acute;1.00&quot;N    1&deg;24&acute;24.76&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Sunderland Wessington Way</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SUNR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;55&acute;6.20&quot;N    1&deg;24&acute;30.21&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Newcastle Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=NEWC&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;58&acute;41.70&quot;N    1&deg;36&acute;37.90&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Newcastle Cradlewell Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=NCA3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;59&acute;11.06&quot;N    1&deg;35&acute;43.30&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Aberdeen</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ABD&amp;view=last_hour</link>
+         <description><![CDATA[Location: 57&deg;09&acute;26.50&quot;N    2&deg;05&acute;39.40&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Aberdeen Union Street Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ABD7&amp;view=last_hour</link>
+         <description><![CDATA[Location: 57&deg;08&acute;40.40&quot;N    2&deg;06&acute;23.30&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Aston Hill</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=AH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;30&acute;13.86&quot;N    3&deg;02&acute;3.04&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Wrexham</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=WREX&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;02&acute;31.99&quot;N    3&deg;00&acute;10.00&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Bury Whitefield Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BURW&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;33&acute;32.50&quot;N    2&deg;17&acute;37.58&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Manchester Piccadilly</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=MAN3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;28&acute;53.47&quot;N    2&deg;14&acute;16.37&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Manchester South</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=MAN4&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;22&acute;8.49&quot;N    2&deg;14&acute;35.81&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Salford Eccles</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ECCL&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;29&acute;5.32&quot;N    2&deg;20&acute;2.90&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Shaw Crompton Way</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CW&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;34&acute;45.42&quot;N    2&deg;05&acute;37.63&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Liverpool Queen's Drive Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LV6&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;26&acute;49.00&quot;N    2&deg;57&acute;45.00&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Liverpool Speke</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LVP&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;20&acute;46.79&quot;N    2&deg;50&acute;39.60&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Blackburn Accrington Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BLAR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;44&acute;51.90&quot;N    2&deg;27&acute;9.81&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Blackpool Marton</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BLC2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;48&acute;17.60&quot;N    3&deg;00&acute;25.83&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Carlisle Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CARL&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;53&acute;41.40&quot;N    2&deg;56&acute;43.11&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Glazebury</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GLAZ&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;27&acute;36.29&quot;N    2&deg;28&acute;19.40&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Great Dun Fell</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=GDF&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;41&acute;3.24&quot;N    2&deg;27&acute;2.88&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Preston</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=PRES&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;45&acute;56.12&quot;N    2&deg;40&acute;49.27&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Warrington</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=WAR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;23&acute;21.41&quot;N    2&deg;36&acute;55.29&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Widnes Milton Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=WSMR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;21&acute;55.41&quot;N    2&deg;43&acute;54.05&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Wigan Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=WIG5&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;32&acute;56.90&quot;N    2&deg;38&acute;17.30&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Wirral Tranmere</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=TRAN&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;22&acute;22.33&quot;N    3&deg;01&acute;21.80&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Belfast Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BEL2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;35&acute;58.74&quot;N    5&deg;55&acute;43.80&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Belfast Stockman's Lane</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BEL1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;34&acute;21.31&quot;N    5&deg;58&acute;29.80&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Armagh Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ARM6&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;21&acute;13.42&quot;N    6&deg;39&acute;16.41&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Ballymena Ballykeel</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BALM&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;51&acute;41.74&quot;N    6&deg;15&acute;3.14&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Derry</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=DERY&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;00&acute;4.41&quot;N    7&deg;19&acute;44.81&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Lough Navar</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LN&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;26&acute;22.24&quot;N    7&deg;54&acute;1.18&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Dumfries</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=DUMF&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;04&acute;12.12&quot;N    3&deg;36&acute;51.24&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Eskdalemuir</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ESK&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;18&acute;55.12&quot;N    3&deg;12&acute;22.00&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Peebles</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=PEEB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 55&deg;39&acute;26.90&quot;N    3&deg;11&acute;47.50&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Brighton Preston Park</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BRT3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;50&acute;27.01&quot;N    0&deg;08&acute;51.26&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Portsmouth</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=PMTH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;49&acute;43.72&quot;N    1&deg;04&acute;6.90&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Canterbury</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CANT&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;16&acute;26.36&quot;N    1&deg;05&acute;53.02&quot;E <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Chatham Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CHAT&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;22&acute;27.35&quot;N    0&deg;32&acute;52.69&quot;E <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Eastbourne</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=EB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;48&acute;20.80&quot;N    0&deg;16&acute;17.80&quot;E <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Harwell</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HAR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;34&acute;15.88&quot;N    1&deg;19&acute;31.02&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Horley</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HORE&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;09&acute;57.11&quot;N    0&deg;10&acute;3.84&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Lullington Heath</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;47&acute;37.32&quot;N    0&deg;10&acute;52.50&quot;E <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Oxford Centre Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=OX&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;45&acute;6.28&quot;N    1&deg;15&acute;26.87&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Oxford St Ebbes</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=OX8&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;44&acute;41.30&quot;N    1&deg;15&acute;37.00&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Reading New Town</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=REA1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;27&acute;11.12&quot;N    0&deg;56&acute;38.64&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Rochester Stoke</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=ROCH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;27&acute;22.21&quot;N    0&deg;38&acute;5.60&quot;E <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Southampton Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SOUT&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;54&acute;29.30&quot;N    1&deg;23&acute;44.80&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Storrington Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=STOR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;55&acute;0.96&quot;N    0&deg;26&acute;58.37&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Cardiff Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CARD&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;28&acute;54.41&quot;N    3&deg;10&acute;34.50&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Chepstow A48</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CHP&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;38&acute;17.14&quot;N    2&deg;40&acute;43.43&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Cwmbran</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CWMB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;39&acute;13.68&quot;N    3&deg;00&acute;25.03&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Hafod-yr-ynys Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CAE6&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;40&acute;50.08&quot;N    3&deg;08&acute;0.63&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Narberth</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=PEMB&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;46&acute;54.42&quot;N    4&deg;41&acute;29.26&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Newport</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=NPT3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;36&acute;4.33&quot;N    2&deg;58&acute;38.21&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Port Talbot Margam</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=PT4&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;35&acute;2.22&quot;N    3&deg;46&acute;14.96&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Swansea Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SWA1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;37&acute;57.71&quot;N    3&deg;56&acute;50.55&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Bristol St Paul's</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BRS8&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;27&acute;46.22&quot;N    2&deg;35&acute;4.14&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Barnstaple A39</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BPLE&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;04&acute;29.25&quot;N    4&deg;02&acute;30.93&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Bath Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BATH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;23&acute;28.06&quot;N    2&deg;21&acute;14.96&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Bournemouth</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BORN&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;44&acute;22.45&quot;N    1&deg;49&acute;36.28&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Charlton Mackrell</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=MACK&amp;view=last_hour</link>
+         <description><![CDATA[Location: 51&deg;03&acute;22.50&quot;N    2&deg;41&acute;0.42&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Exeter Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=EX&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;43&acute;30.30&quot;N    3&deg;31&acute;56.87&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 19:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Honiton</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HONI&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;47&acute;32.23&quot;N    3&deg;11&acute;48.13&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Plymouth Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=PLYM&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;22&acute;18.01&quot;N    4&deg;08&acute;32.50&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Saltash Callington Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SASH&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;24&acute;41.27&quot;N    4&deg;13&acute;39.64&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Yarner Wood</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=YW&amp;view=last_hour</link>
+         <description><![CDATA[Location: 50&deg;35&acute;51.36&quot;N    3&deg;42&acute;59.44&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Cannock Watling Street</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=CANR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;40&acute;29.16&quot;N    2&deg;01&acute;51.18&quot;W <br />Current Pollution level is n/a ]]></description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Coventry Allesley</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=COAL&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;24&acute;41.63&quot;N    1&deg;33&acute;36.82&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Leamington Spa</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LEAM&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;17&acute;19.72&quot;N    1&deg;31&acute;59.23&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Leamington Spa Rugby Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LEAR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;17&acute;41.58&quot;N    1&deg;32&acute;34.48&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Leominster</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LEOM&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;13&acute;18.26&quot;N    2&deg;44&acute;11.99&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Stoke-on-Trent Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=STOK&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;01&acute;41.56&quot;N    2&deg;10&acute;30.48&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Birmingham Acocks Green</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=AGRN&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;26&acute;13.79&quot;N    1&deg;49&acute;48.00&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Birmingham Tyburn</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BIR1&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;30&acute;42.20&quot;N    1&deg;49&acute;50.10&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Birmingham Tyburn Roadside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BIRT&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;30&acute;43.90&quot;N    1&deg;49&acute;51.10&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Oldbury Birmingham Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BOLD&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;30&acute;8.77&quot;N    2&deg;00&acute;12.59&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 18:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Walsall Woodlands</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=WAL4&amp;view=last_hour</link>
+         <description><![CDATA[Location: 52&deg;36&acute;20.24&quot;N    2&deg;01&acute;49.88&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Sheffield Devonshire Green</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SHDG&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;22&acute;43.04&quot;N    1&deg;28&acute;41.15&quot;W <br />Current Pollution level is n/a ]]></description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Sheffield Tinsley</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SHE&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;24&acute;38.09&quot;N    1&deg;23&acute;46.10&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Leeds Centre</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LEED&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;48&acute;13.61&quot;N    1&deg;32&acute;47.30&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Leeds Headingley Kerbside</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=LED6&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;49&acute;11.90&quot;N    1&deg;34&acute;34.90&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Barnsley Gawber</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=BAR3&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;33&acute;46.51&quot;N    1&deg;30&acute;37.57&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>High Muffles</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HM&amp;view=last_hour</link>
+         <description><![CDATA[Location: 54&deg;20&acute;5.80&quot;N    0&deg;48&acute;30.78&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Hull Freetown</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HUL2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;44&acute;55.61&quot;N    0&deg;20&acute;28.40&quot;W <br />Current Pollution level is Low at index 3]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Hull Holderness Road</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=HULR&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;45&acute;32.30&quot;N    0&deg;18&acute;20.70&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>Scunthorpe Town</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=SCN2&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;35&acute;10.82&quot;N    0&deg;38&acute;12.52&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>York Bootham</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=YK10&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;58&acute;3.05&quot;N    1&deg;05&acute;11.45&quot;W <br />Current Pollution level is Low at index 1]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+    <item>
+         <title>York Fishergate</title>
+         <link>http://uk-air.defra.gov.uk/data/site-data?f_site_id=YK11&amp;view=last_hour</link>
+         <description><![CDATA[Location: 53&deg;57&acute;6.80&quot;N    1&deg;04&acute;33.10&quot;W <br />Current Pollution level is Low at index 2]]> </description>
+         <pubDate>Sat, 21 Mar 2015 20:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>
