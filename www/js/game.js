@@ -172,16 +172,24 @@ window.Game.PhaserGame.prototype = {
         this.current_time = this.game.time.time;
         var dt = this.current_time - this.previous_time;
 
+        // -------------
         // Update enemy movement
+        // -------------
         for (var i = 0; i < this.enemies.length; i++)
         {
             if (this.enemies[i].x > this.x_bounds[1])
                 this.enemies[i].x = this.enemies[i].x - (this.enemy_speed * dt);
             else
                 this.enemies[i].x = this.x_bounds[0];
-        }
 
-        // 
+            // Collision detection
+            for (var j = 0; j < this.items.length; i++)
+            {
+                var distance = Math.sqrt(Math.pow(this.enemies[i].x - this.items[j].x,2) + Math.pow(this.enemies[i].y - this.items[j].y,2));
+                if (distance < 25)
+                    console.log("hit");
+            }
+        }
 
         // Store previous time
         this.previous_time = this.current_time;
