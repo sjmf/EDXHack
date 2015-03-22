@@ -68,7 +68,9 @@ window.Game.PhaserGame.prototype = {
 		// Add city images
         this.load.image('newc', 'assets/back/newcastle.png');
         this.load.image('lond', 'assets/back/londonphoto.png');
-        cities = [ 'newc', 'lond' ];
+        this.load.image('live', 'assets/back/liverpool.jpg');
+        this.load.image('manc', 'assets/back/manchester.jpg');
+        cities = [ 'newc', 'lond', 'live', 'manc' ];
 
         // Load background image
         this.load.image('background', 'assets/back/grass.png');
