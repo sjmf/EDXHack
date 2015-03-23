@@ -1,6 +1,6 @@
 <?php
 
-define('API_KEY', "AIzaSyCotD38o0E-Zs61oWkl2a9hIwSK-VEa28U");
+require_once('config.php');
 
 function get_loc($address = "1600 Amphitheatre Parkway, Mountain View, CA") {
 
